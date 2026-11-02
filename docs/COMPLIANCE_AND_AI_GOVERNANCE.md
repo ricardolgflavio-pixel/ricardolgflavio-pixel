@@ -4,7 +4,7 @@
 |---|---|
 | **Status** | Aceito (v1.0) |
 | **Projeto** | AutoTech AI OS & Zezé da Regulagem |
-| **Autor** | Ricardo Luiz G. Flávio ([LinkedIn](https://www.linkedin.com/in/ricardo-flavio/)) — Direito (FASC, 8º sem.) e Segurança da Informação (UCB, 6º sem.) |
+| **Autor** | Ricardo Luiz G. Flávio ([LinkedIn](https://www.linkedin.com/in/ricardo-flavio/)) — Direito (FACIC, 8º sem.) e Segurança da Informação (UCB, 6º sem.) |
 | **Domínios** | Direito Digital · GRC · AppSec · Engenharia de IA |
 | **Marco normativo** | Lei 9.610/98 (Direitos Autorais) · Lei 9.609/98 (Software) · Lei 13.709/2018 (LGPD) |
 | **Referenciais técnicos** | OWASP Top 10 for LLM Applications (2025) · OWASP Top 10 (2021) · NIST AI RMF 1.0 · ISO/IEC 27001 · ISO/IEC 42001 |

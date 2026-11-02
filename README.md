@@ -13,7 +13,7 @@
 ![AI Governance](https://img.shields.io/badge/AI%20Governance-OWASP%20LLM%20Top%2010-7B2CBF)
 ![IP Compliance](https://img.shields.io/badge/IP%20Compliance-Lei%209.610%2F98%20%7C%209.609%2F98-B5651D)
 
-> **Bacharelado em Direito** — FASC, Cruzeiro (8º semestre) · **Graduação em Segurança da Informação** — UCB, Universidade
+> **Bacharelado em Direito** — FACIC, Cruzeiro (8º semestre) · **Graduação em Segurança da Informação** — UCB, Universidade
 > Católica de Brasília (6º semestre) · **Em busca de estágio** em AppSec, DevSecOps, GRC, Direito Digital e Engenharia de IA.
 
 ## 🇬🇧 Executive summary
@@ -167,6 +167,11 @@ A lógica não é uma política em PDF: é o contrato de dados executável em
 | [`docs/COMPLIANCE_AND_AI_GOVERNANCE.md`](docs/COMPLIANCE_AND_AI_GOVERNANCE.md) | RFC/ADR técnico-jurídico, matriz de risco e rastreabilidade normativa. |
 | [`docs/LINKEDIN_KIT.md`](docs/LINKEDIN_KIT.md) | Kit de posicionamento: headlines, "Sobre", projeto (STAR), competências e posts. |
 
+> **Escopo deste repositório.** Este é o *showcase público*: contém os componentes de segurança e conformidade que posso
+> demonstrar sem expor o produto (auditor SAST, contrato de dados do RAG, pipeline de CI e ADR). O monorepo completo do
+> AutoTech AI OS (agentes LangGraph, OAuth2/Vault, módulos de negócio), hoje em teste em uma oficina real em Lorena-SP,
+> é privado. *Public showcase: the full product monorepo is private.*
+
 ### Executar localmente
 
 ```bash
@@ -221,7 +226,7 @@ Gestão de segredos (Vault) · Secure SDLC · GRC · ISO/IEC 27001.
 
 ## 🤝 Contato
 
-**Ricardo Luiz G. Flávio** — Direito (FASC Cruzeiro, 8º semestre) e Segurança da Informação (UCB, 6º semestre).
+**Ricardo Luiz G. Flávio** — Direito (FACIC Cruzeiro, 8º semestre) e Segurança da Informação (UCB, 6º semestre).
 
 👉 [LinkedIn — Ricardo Luiz G. Flávio](https://www.linkedin.com/in/ricardo-flavio/)
 

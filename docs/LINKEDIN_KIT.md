@@ -22,7 +22,7 @@
 **Opção A — Híbrida: Direito Digital + AppSec** *(recomendada para vagas que pedem os dois perfis)*
 
 ```text
-Estudante de Direito (8º sem.) e Segurança da Informação (6º sem.) | AppSec & Direito Digital | LGPD, Governança de IA e DevSecOps em Python | Buscando estágio
+Direito Digital & Segurança da Informação | Governança de IA, LGPD, DevSecOps & AppSec | Desenvolvedor Python (RAG / LangGraph) | Graduando em Direito (8º sem.) & Segurança da Informação (6º sem.) | Buscando estágio
 ```
 
 **Opção B — Foco técnico: DevSecOps / Engenharia de IA**
@@ -34,7 +34,7 @@ Segurança da Informação (UCB) | DevSecOps & AI Engineering: Python, LangGraph
 **Opção C — Foco jurídico: GRC / LGPD**
 
 ```text
-Direito (FASC) + Segurança da Informação (UCB) | GRC, LGPD, Propriedade Intelectual e Governança de IA | Compliance as Code | Buscando estágio
+Direito (FACIC) + Segurança da Informação (UCB) | GRC, LGPD, Propriedade Intelectual e Governança de IA | Compliance as Code | Buscando estágio
 ```
 
 ---
@@ -42,7 +42,7 @@ Direito (FASC) + Segurança da Informação (UCB) | GRC, LGPD, Propriedade Intel
 ## 2. Seção "Sobre" (About)
 
 ```text
-Estudo Direito (8º semestre, FASC Cruzeiro) e Segurança da Informação (6º semestre, UCB) e atuo onde as duas áreas se encontram: transformar exigências legais em controles técnicos que funcionam, são testados e deixam evidências.
+Estudo Direito (8º semestre, FACIC Cruzeiro) e Segurança da Informação (6º semestre, UCB) e atuo onde as duas áreas se encontram: transformar exigências legais em controles técnicos que funcionam, são testados e deixam evidências.
 
 Busco estágio em AppSec, DevSecOps, GRC/Privacidade, Direito Digital (LGPD, Governança de IA e Propriedade Intelectual) ou Engenharia de IA.
 
@@ -108,8 +108,8 @@ Stack: Python, LangGraph, FastAPI, PostgreSQL, pgvector, Pydantic, Mypy, Bandit,
 
 **Formação (campos de educação):**
 
-- *Universidade Católica de Brasília (UCB)* — Graduação em Segurança da Informação · 6º semestre. Atividades: AppSec, DevSecOps, criptografia, GRC.
-- *FASC — Faculdades Integradas de Cruzeiro* — Bacharelado em Direito · 8º semestre. Atividades: Direito Digital, LGPD, Propriedade Intelectual.
+- *Universidade Católica de Brasília (UCB)* — Curso Superior de Tecnologia (Tecnólogo) em Segurança da Informação · 6º semestre · 2025–2028. Atividades: AppSec, DevSecOps, criptografia, GRC.
+- *FACIC — Cruzeiro (SP)* — Bacharelado em Direito · 8º semestre · 2023–2028. Atividades: Direito Digital, LGPD, Propriedade Intelectual.
 
 ---
 
@@ -138,13 +138,13 @@ LGPD (Lei Geral de Proteção de Dados) · Direito Digital · Governança de IA 
 Direito e Segurança da Informação costumam ser tratados como mundos separados. Eu estudo os dois, e acredito que o futuro da área está no encontro entre eles.
 
 Hoje curso:
-⚖️ Direito, no 8º semestre (FASC, Cruzeiro)
+⚖️ Direito, no 8º semestre (FACIC, Cruzeiro)
 🔐 Segurança da Informação, no 6º semestre (UCB, Brasília)
 
 Por que a dupla formação faz diferença?
 Porque quem entende LGPD, Propriedade Intelectual e responsabilidade civil, e também sabe ler um relatório de SAST, consegue transformar uma exigência legal em um controle técnico que pode ser testado.
 
-Foi isso que fiz no AutoTech AI OS & Zezé da Regulagem, meu projeto principal:
+Apliquei isso no AutoTech AI OS & Zezé da Regulagem, meu projeto principal: um ecossistema para oficinas mecânicas, hoje em teste em uma oficina em Lorena-SP, que automatiza com IA o fluxo desde o primeiro atendimento ao cliente, passando pelo agendamento e pela operação no pátio, até a O.S. e a entrega do veículo. Ele reúne:
 • agentes de IA em LangGraph (diagnóstico, visão computacional e orçamentação);
 • RAG em PostgreSQL com pgvector;
 • OAuth2 e segredos no Vault;
@@ -249,3 +249,75 @@ O código, o workflow de GitHub Actions e o ADR estão no meu GitHub, link no pr
 - [ ] Modo "Open to Work" configurado para estágio (visível só para recrutadores, se preferir).
 - [ ] Publicar 1 post por semana, na ordem: Post 1 → Post 2 → Post 3.
 - [ ] Idiomas: Português (nativo) e Inglês (informe seu nível real).
+
+---
+
+## 7. Perfil em inglês (idioma secundário, foco em vagas nos EUA)
+
+> Cadastrado como segundo idioma do perfil (Configurações do perfil → Idioma). Recrutadores nos EUA veem esta versão automaticamente.
+
+**Headline (EN)**
+
+```text
+Law (LL.B.) & Information Security Student | AppSec, DevSecOps & AI Governance (LGPD/Privacy, IP) | Python, LangGraph, RAG | Seeking Internship
+```
+
+**About (EN)**
+
+```text
+I study Law (LL.B., 8th semester, FACIC Cruzeiro) and Information Security (Technologist degree, UCB Brasília), and I work where the two meet: turning legal requirements into technical controls that are tested and leave audit evidence.
+
+I am looking for an internship in Application Security, DevSecOps, GRC/Privacy, Digital Law (data protection, AI governance, intellectual property) or AI Engineering.
+
+WHAT I BUILD
+I am the author of AutoTech AI OS & Zezé da Regulagem, a B2B/B2C SaaS monorepo for the automotive aftermarket, currently being tested in a real repair shop in Brazil:
+• Multi-agent orchestration with LangGraph (mechanical diagnosis, computer vision, commercial quoting).
+• Semantic RAG on PostgreSQL with pgvector.
+• OAuth2 authentication and secrets management with Vault.
+• Strict validation with Pydantic v2 and Mypy.
+• A SAST pipeline with "Guardião", my own Python AST-based auditor, plus Bandit and Semgrep.
+
+MY EDGE: COMPLIANCE AS CODE
+I designed the RAG under Brazil's Copyright Law (9.610/98), Software Law (9.609/98) and LGPD (Brazil's GDPR-style data protection law). The architecture forbids scraping closed proprietary databases and ingests only factual technical data (ohms, volts, bar, pinouts, SAE/ISO OBD2 codes, torque in Nm), open manufacturer catalogs and first-party telemetry. The legal rule became a Pydantic schema, a test and a CI quality gate.
+
+HOW I WORK
+• Security & Privacy by Design: risk handled at design time, not afterwards.
+• OWASP Top 10 and OWASP Top 10 for LLM Applications as a shared language across teams.
+• Decision records (ADR/RFC) with risk matrix and traceability from law to control.
+• Clean, typed, auditable code.
+
+TOOLS
+Python, LangGraph, RAG, PostgreSQL, pgvector, FastAPI, Pydantic, Mypy, Bandit, Semgrep, GitHub Actions, OAuth2, Vault.
+
+Code, CI pipeline and governance ADR are on my GitHub: github.com/ricardolgflavio-pixel
+```
+
+**Project (EN)**
+
+```text
+B2B/B2C SaaS monorepo for the automotive aftermarket: AI agents, preventive-maintenance plans, SOS tow/emergency and a P2P marketplace.
+
+SITUATION
+▪ AI diagnosis for cars needs technical data, and scraping closed proprietary databases risks violating Brazilian copyright and software laws (9.610/98, 9.609/98). First-party telemetry also contains personal data under LGPD.
+
+TASK
+▪ Design a multi-agent RAG system that is secure and legally defensible by design, with auditable evidence.
+
+ACTION
+▪ Orchestrated 3 LangGraph agents: Mechanical Diagnosis, Computer Vision and Commercial Quoting.
+▪ Modeled the RAG on PostgreSQL + pgvector with an IP-compliance filter: lawful source, factual data only, no scraping.
+▪ Implemented Compliance as Code with Pydantic v2: validation of source, license, copyright markers and PII before anything is written to the index.
+▪ Applied OAuth2 with least-privilege scopes, Vault-managed secrets, Pydantic and strict Mypy.
+▪ Built "Guardião", an in-house AST-based SAST auditor (eval/exec, hardcoded secrets, string-built SQL, unvalidated endpoints), integrated with Bandit, Semgrep and pip-audit.
+▪ Wrote an ADR with a risk matrix (OWASP Top 10 for LLM, LGPD, Copyright Law).
+
+TECHNICAL RESULT
+▪ CI quality gate that blocks merges on high-severity findings (strict typing, three SAST layers, SCA).
+▪ Findings mapped to CWE and OWASP for injection, exposed secrets and dynamic execution.
+
+LEGAL RESULT
+▪ IP policy enforced as code: prohibited sources are rejected at ingestion, with an audit trail (audit_id and SHA-256).
+▪ Privacy by Design: telemetry is admitted only with a lawful basis, anonymization and tenant segregation.
+
+Stack: Python, LangGraph, FastAPI, PostgreSQL, pgvector, Pydantic, Mypy, Bandit, Semgrep, GitHub Actions, OAuth2, Vault.
+```
