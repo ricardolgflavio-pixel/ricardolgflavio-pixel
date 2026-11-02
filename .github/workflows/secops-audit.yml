@@ -1,0 +1,92 @@
+name: SecOps Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: secops-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.12"
+  REPORT_DIR: reports
+
+jobs:
+  secops:
+    name: SAST, tipagem estrita e Compliance as Code
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt -r requirements-dev.txt
+          mkdir -p "$REPORT_DIR"
+
+      - name: Mypy (tipagem estrita)
+        run: mypy --strict showcase
+
+      - name: Bandit (SAST — AST do CPython)
+        run: |
+          bandit -r showcase -ll -f json -o "$REPORT_DIR/bandit.json" --exit-zero
+          bandit -r showcase -ll
+
+      - name: Semgrep (regras OWASP e governança de IA)
+        env:
+          SEMGREP_SEND_METRICS: "off"
+        run: |
+          semgrep scan \
+            --config p/python \
+            --config p/owasp-top-ten \
+            --config .semgrep/ai-governance.yml \
+            --metrics=off \
+            --error \
+            --json --output "$REPORT_DIR/semgrep.json" \
+            showcase
+
+      - name: Guardião AST — autoteste do detector
+        run: python showcase/devsecops_guardiao_ast.py --self-test
+
+      - name: Guardião AST — quality gate (falha em HIGH ou superior)
+        run: |
+          python showcase/devsecops_guardiao_ast.py showcase --fail-on high --format json \
+            > "$REPORT_DIR/guardiao.json" || true
+          python showcase/devsecops_guardiao_ast.py showcase --fail-on high --no-color
+
+      - name: Gate de ingestão RAG (Compliance as Code)
+        run: python showcase/rag_legal_ingestion_schema.py
+
+      - name: pip-audit (vulnerabilidades em dependências — SCA)
+        run: pip-audit -r requirements.txt --strict
+
+      - name: Publicar relatórios de auditoria
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: secops-reports
+          path: ${{ env.REPORT_DIR }}/
+          if-no-files-found: ignore
+          retention-days: 30

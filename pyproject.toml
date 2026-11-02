@@ -1,0 +1,17 @@
+[project]
+name = "portfolio-devsecops-ai-governance"
+version = "1.0.0"
+description = "Portfólio técnico: DevSecOps, Governança de IA e Compliance as Code (AutoTech AI OS)."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = ["pydantic>=2.9,<3"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+files = ["showcase"]
+
+[tool.bandit]
+exclude_dirs = [".venv", "venv", ".git"]
