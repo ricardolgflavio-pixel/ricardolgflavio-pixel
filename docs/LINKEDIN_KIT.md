@@ -22,7 +22,7 @@
 **Opção A — Híbrida: Direito Digital + AppSec** *(recomendada para vagas que pedem os dois perfis)*
 
 ```text
-Direito Digital & Segurança da Informação | Governança de IA, LGPD, DevSecOps & AppSec | Desenvolvedor Python (RAG / LangGraph) | Graduando em Direito (8º sem.) & Segurança da Informação (6º sem.) | Buscando estágio
+Direito Digital & Segurança da Informação | Governança de IA, LGPD, DevSecOps & AppSec | Desenvolvedor Python (RAG / LangGraph) | Graduando em Direito (7º sem.) & Segurança da Informação (3º sem.) | Buscando estágio
 ```
 
 **Opção B — Foco técnico: DevSecOps / Engenharia de IA**
@@ -42,7 +42,7 @@ Direito (FACIC) + Segurança da Informação (UCB) | GRC, LGPD, Propriedade Inte
 ## 2. Seção "Sobre" (About)
 
 ```text
-Estudo Direito (8º semestre, FACIC Cruzeiro) e Segurança da Informação (6º semestre, UCB) e atuo onde as duas áreas se encontram: transformar exigências legais em controles técnicos que funcionam, são testados e deixam evidências.
+Estudo Direito (7º semestre, FACIC Cruzeiro) e Segurança da Informação (3º semestre, UCB) e atuo onde as duas áreas se encontram: transformar exigências legais em controles técnicos que funcionam, são testados e deixam evidências.
 
 Busco estágio em AppSec, DevSecOps, GRC/Privacidade, Direito Digital (LGPD, Governança de IA e Propriedade Intelectual) ou Engenharia de IA.
 
@@ -108,8 +108,8 @@ Stack: Python, LangGraph, FastAPI, PostgreSQL, pgvector, Pydantic, Mypy, Bandit,
 
 **Formação (campos de educação):**
 
-- *Universidade Católica de Brasília (UCB)* — Curso Superior de Tecnologia (Tecnólogo) em Segurança da Informação · 6º semestre · 2025–2028. Atividades: AppSec, DevSecOps, criptografia, GRC.
-- *FACIC — Cruzeiro (SP)* — Bacharelado em Direito · 8º semestre · 2023–2028. Atividades: Direito Digital, LGPD, Propriedade Intelectual.
+- *Universidade Católica de Brasília (UCB)* — Curso Superior de Tecnologia (Tecnólogo) em Segurança da Informação · 3º semestre · 2025–2028. Atividades: AppSec, DevSecOps, criptografia, GRC.
+- *FACIC — Cruzeiro (SP)* — Bacharelado em Direito · 7º semestre · 2023–2028. Atividades: Direito Digital, LGPD, Propriedade Intelectual.
 
 ---
 
@@ -138,8 +138,8 @@ LGPD (Lei Geral de Proteção de Dados) · Direito Digital · Governança de IA 
 Direito e Segurança da Informação costumam ser tratados como mundos separados. Eu estudo os dois, e acredito que o futuro da área está no encontro entre eles.
 
 Hoje curso:
-⚖️ Direito, no 8º semestre (FACIC, Cruzeiro)
-🔐 Segurança da Informação, no 6º semestre (UCB, Brasília)
+⚖️ Direito, no 7º semestre (FACIC, Cruzeiro)
+🔐 Segurança da Informação, no 3º semestre (UCB, Brasília)
 
 Por que a dupla formação faz diferença?
 Porque quem entende LGPD, Propriedade Intelectual e responsabilidade civil, e também sabe ler um relatório de SAST, consegue transformar uma exigência legal em um controle técnico que pode ser testado.
@@ -259,13 +259,13 @@ O código, o workflow de GitHub Actions e o ADR estão no meu GitHub, link no pr
 **Headline (EN)**
 
 ```text
-Law (LL.B.) & Information Security Student | AppSec, DevSecOps & AI Governance (LGPD/Privacy, IP) | Python, LangGraph, RAG | Seeking Internship
+Law (LL.B., 7th sem.) & Information Security (3rd sem.) Student | AppSec, DevSecOps & AI Governance (LGPD/Privacy, IP) | Python, LangGraph, RAG | Seeking Internship
 ```
 
 **About (EN)**
 
 ```text
-I study Law (LL.B., 8th semester, FACIC Cruzeiro) and Information Security (Technologist degree, UCB Brasília), and I work where the two meet: turning legal requirements into technical controls that are tested and leave audit evidence.
+I study Law (LL.B., 7th semester, FACIC Cruzeiro) and Information Security (Technologist degree, 3rd semester, UCB Brasília), and I work where the two meet: turning legal requirements into technical controls that are tested and leave audit evidence.
 
 I am looking for an internship in Application Security, DevSecOps, GRC/Privacy, Digital Law (data protection, AI governance, intellectual property) or AI Engineering.
 

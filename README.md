@@ -13,12 +13,12 @@
 ![AI Governance](https://img.shields.io/badge/AI%20Governance-OWASP%20LLM%20Top%2010-7B2CBF)
 ![IP Compliance](https://img.shields.io/badge/IP%20Compliance-Lei%209.610%2F98%20%7C%209.609%2F98-B5651D)
 
-> **Bacharelado em Direito** — FACIC, Cruzeiro (8º semestre) · **Graduação em Segurança da Informação** — UCB, Universidade
-> Católica de Brasília (6º semestre) · **Em busca de estágio** em AppSec, DevSecOps, GRC, Direito Digital e Engenharia de IA.
+> **Bacharelado em Direito** — FACIC, Cruzeiro (7º semestre) · **Graduação em Segurança da Informação** — UCB, Universidade
+> Católica de Brasília (3º semestre) · **Em busca de estágio** em AppSec, DevSecOps, GRC, Direito Digital e Engenharia de IA.
 
 ## 🇬🇧 Executive summary
 
-I am a dual-degree student (Law, 8th semester; Information Security, 6th semester) who builds what most teams only
+I am a dual-degree student (Law, 7th semester; Information Security, 3rd semester) who builds what most teams only
 document: **legal requirements turned into executable security and compliance controls**. My flagship project,
 **AutoTech AI OS & Zezé da Regulagem**, is a monorepo SaaS (B2B/B2C) for the automotive aftermarket. It combines a
 **LangGraph multi-agent system** (mechanical diagnosis, computer vision, commercial quoting), a **semantic RAG on
@@ -162,15 +162,18 @@ A lógica não é uma política em PDF: é o contrato de dados executável em
 |---|---|
 | [`showcase/devsecops_guardiao_ast.py`](showcase/devsecops_guardiao_ast.py) | Auditor SAST por AST: `eval`/`exec`, segredos *hardcoded*, SQL concatenado, *endpoints* sem validação, `shell=True`, desserialização insegura, TLS desabilitado e hashes fracos. Relatório no terminal, saída JSON e *quality gate* por severidade. |
 | [`showcase/rag_legal_ingestion_schema.py`](showcase/rag_legal_ingestion_schema.py) | *Compliance as Code* com Pydantic v2: valida origem (`SourceType`), método de coleta, licença, PII e marcadores de copyright antes de qualquer escrita no `pgvector`. |
-| [`.github/workflows/secops-audit.yml`](.github/workflows/secops-audit.yml) | Pipeline: Mypy strict → Bandit → Semgrep → Guardião (autoteste + gate) → gate RAG → pip-audit. |
+| [`showcase/langgraph_rag_agent.py`](showcase/langgraph_rag_agent.py) | Orquestrador multi-agente determinístico (`StateGraph`) sobre o gate jurídico: guardrail de **prompt injection (OWASP LLM01)**, RAG que só recupera fontes aprovadas, roteamento entre agentes de Diagnóstico, Visão e Comercial e guardrail de saída com citação rastreável (**OWASP LLM05**). Estado imutável e trilha de auditoria. |
+| [`.github/workflows/secops-audit.yml`](.github/workflows/secops-audit.yml) | Pipeline: Mypy strict → Bandit → Semgrep → Guardião (autoteste + gate) → gate RAG → orquestrador multi-agente (autoteste + demo) → pip-audit. |
 | [`.semgrep/ai-governance.yml`](.semgrep/ai-governance.yml) | Regras próprias de Semgrep, inclusive a que bloqueia referências a bases proprietárias fechadas. |
 | [`docs/COMPLIANCE_AND_AI_GOVERNANCE.md`](docs/COMPLIANCE_AND_AI_GOVERNANCE.md) | RFC/ADR técnico-jurídico, matriz de risco e rastreabilidade normativa. |
 | [`docs/LINKEDIN_KIT.md`](docs/LINKEDIN_KIT.md) | Kit de posicionamento: headlines, "Sobre", projeto (STAR), competências e posts. |
 
 > **Escopo deste repositório.** Este é o *showcase público*: contém os componentes de segurança e conformidade que posso
-> demonstrar sem expor o produto (auditor SAST, contrato de dados do RAG, pipeline de CI e ADR). O monorepo completo do
-> AutoTech AI OS (agentes LangGraph, OAuth2/Vault, módulos de negócio), hoje em teste em uma oficina real em Lorena-SP,
-> é privado. *Public showcase: the full product monorepo is private.*
+> demonstrar sem expor o produto (auditor SAST, contrato de dados do RAG, orquestrador multi-agente com guardrails, pipeline
+> de CI e ADR). O orquestrador usa um `StateGraph` próprio e determinístico, com a mesma API conceitual do LangGraph e sem
+> LLM real, para provar a arquitetura de controle. O monorepo completo do AutoTech AI OS (agentes com LLM, OAuth2/Vault,
+> módulos de negócio), hoje em teste em uma oficina real em Lorena-SP, é privado.
+> *Public showcase: the full product monorepo is private.*
 
 ### Executar localmente
 
@@ -182,6 +185,8 @@ python showcase/devsecops_guardiao_ast.py --demo        # relatório SAST de um 
 python showcase/devsecops_guardiao_ast.py --self-test   # regressão do detector
 python showcase/devsecops_guardiao_ast.py showcase --fail-on high
 python showcase/rag_legal_ingestion_schema.py           # gate de ingestão: 3 aceitos, 3 rejeitados
+python showcase/langgraph_rag_agent.py                  # 3 cenários: legítimo, prompt injection, fonte não auditada
+python showcase/langgraph_rag_agent.py --self-test      # 30 verificações dos guardrails
 mypy --strict showcase && bandit -r showcase -ll
 ```
 
@@ -206,6 +211,7 @@ Trecho da saída do gate de ingestão:
 │   └── LINKEDIN_KIT.md
 ├── showcase/
 │   ├── devsecops_guardiao_ast.py
+│   ├── langgraph_rag_agent.py
 │   └── rag_legal_ingestion_schema.py
 ├── .semgrep/ai-governance.yml
 ├── .github/workflows/secops-audit.yml
@@ -226,7 +232,7 @@ Gestão de segredos (Vault) · Secure SDLC · GRC · ISO/IEC 27001.
 
 ## 🤝 Contato
 
-**Ricardo Luiz G. Flávio** — Direito (FACIC Cruzeiro, 8º semestre) e Segurança da Informação (UCB, 6º semestre).
+**Ricardo Luiz G. Flávio** — Direito (FACIC Cruzeiro, 7º semestre) e Segurança da Informação (UCB, 3º semestre).
 
 👉 [LinkedIn — Ricardo Luiz G. Flávio](https://www.linkedin.com/in/ricardo-flavio/)
 

@@ -79,6 +79,12 @@ jobs:
       - name: Gate de ingestão RAG (Compliance as Code)
         run: python showcase/rag_legal_ingestion_schema.py
 
+      - name: Orquestrador multi-agente (autoteste de guardrails LLM01/LLM05)
+        run: python showcase/langgraph_rag_agent.py --self-test
+
+      - name: Orquestrador multi-agente (cenários de demonstração)
+        run: python showcase/langgraph_rag_agent.py
+
       - name: pip-audit (vulnerabilidades em dependências — SCA)
         run: pip-audit -r requirements.txt --strict
 
