@@ -16,7 +16,15 @@
 > **Bacharelado em Direito** — FACIC, Cruzeiro (7º semestre) · **Graduação em Segurança da Informação** — UCB, Universidade
 > Católica de Brasília (3º semestre) · **Em busca de estágio** em AppSec, DevSecOps, GRC, Direito Digital e Engenharia de IA.
 
+**Lorena, São Paulo, Brasil** · **31 anos de prática desde 1995** em Hardware, Redes, Eletrônica Embarcada Automotiva (ECU/EPROM/ADAS) e Telemetria Satelital.
+
+Na **Mecânica Rally**, liderança da transformação digital e implantação da vertical de seguros e rastreamento, com **+60% de crescimento**, e criação do **AutoTech AI OS & Zezé da Regulagem**. Credenciado Ituran desde 2018. Formação: Direito (7º semestre — FACIC, 2023–2028), CST em Segurança da Informação (3º semestre — UCB, 2025–2028) e Técnico em Mecatrônica (UNI VITÓRIA TEC, 2026–2026, concluinte 2026).
+
+Busco **estágio em Segurança da Informação (AppSec, DevSecOps, Cibersegurança Automotiva, GRC), Direito Digital (LGPD, Governança de IA) ou Engenharia de IA**, além de projetos e consultoria técnica.
+
 ## 🇬🇧 Executive summary
+
+Based in **Lorena, São Paulo, Brazil**, I bring **31 years of hands-on experience since 1995** in hardware, networks, automotive embedded electronics (ECU/EPROM/ADAS) and satellite telemetry. At Mecânica Rally, digital transformation and the launch of insurance/tracking services drove **over 60% growth**. I am an accredited Ituran specialist and am completing a **Technical Diploma in Mechatronics (UNI VITÓRIA TEC, 2026)**.
 
 I am a dual-degree student (Law, 7th semester; Information Security, 3rd semester) who builds what most teams only
 document: **legal requirements turned into executable security and compliance controls**. My flagship project,
@@ -170,8 +178,8 @@ A lógica não é uma política em PDF: é o contrato de dados executável em
 
 > **Escopo deste repositório.** Este é o *showcase público*: contém os componentes de segurança e conformidade que posso
 > demonstrar sem expor o produto (auditor SAST, contrato de dados do RAG, orquestrador multi-agente com guardrails, pipeline
-> de CI e ADR). O orquestrador usa um `StateGraph` próprio e determinístico, com a mesma API conceitual do LangGraph e sem
-> LLM real, para provar a arquitetura de controle. O monorepo completo do AutoTech AI OS (agentes com LLM, OAuth2/Vault,
+> de CI e ADR). O orquestrador usa um `StateGraph` próprio e determinístico, com a mesma API conceitual do LangGraph e com
+> síntese opcional via API (`--live-llm`), mantendo o modo offline como padrão, para provar a arquitetura de controle. O monorepo completo do AutoTech AI OS (agentes com LLM, OAuth2/Vault,
 > módulos de negócio), hoje em teste em uma oficina real em Lorena-SP, é privado.
 > *Public showcase: the full product monorepo is private.*
 
@@ -186,7 +194,8 @@ python showcase/devsecops_guardiao_ast.py --self-test   # regressão do detector
 python showcase/devsecops_guardiao_ast.py showcase --fail-on high
 python showcase/rag_legal_ingestion_schema.py           # gate de ingestão: 3 aceitos, 3 rejeitados
 python showcase/langgraph_rag_agent.py                  # 3 cenários: legítimo, prompt injection, fonte não auditada
-python showcase/langgraph_rag_agent.py --self-test      # 30 verificações dos guardrails
+python showcase/langgraph_rag_agent.py --self-test      # 30+ verificações offline dos guardrails
+python showcase/langgraph_rag_agent.py --live-llm       # opt-in; sem chave usa fallback offline
 mypy --strict showcase && bandit -r showcase -ll
 ```
 
@@ -209,6 +218,10 @@ Trecho da saída do gate de ingestão:
 ├── docs/
 │   ├── COMPLIANCE_AND_AI_GOVERNANCE.md
 │   └── LINKEDIN_KIT.md
+├── assets/linkedin_post_card.html
+├── scripts/
+│   ├── linkedin_auto_config.py
+│   └── linkedin_profile_data.json
 ├── showcase/
 │   ├── devsecops_guardiao_ast.py
 │   ├── langgraph_rag_agent.py
@@ -242,3 +255,168 @@ repositório contam a mesma história: **segurança e conformidade projetadas de
 > Aviso: o conteúdo jurídico deste repositório é educacional e de portfólio; não constitui aconselhamento jurídico.
 
 Licença: [MIT](LICENSE).
+
+## Trajetória, formação e certificados / Career, education and certificates
+
+As oito experiências (1995–2026), as três formações e os sete certificados oficiais (**294 horas**) estão detalhados abaixo em PT-BR e EN-US.
+
+### 2018 – Presente / Present | Mecânica Rally
+
+**PT-BR — Gestor Sênior, Responsável Técnico & Arquiteto de Transformação Digital (AutoTech AI OS)** · Lorena, São Paulo, Brasil
+
+Liderança técnica e governança; transformação digital e implantação da vertical de seguros e rastreadores (linha leve, pesada, motos e máquinas), impulsionando a empresa em +60%. Arquitetura do AutoTech AI OS & Zezé da Regulagem (Python, LangGraph, pgvector, DevSecOps, LGPD/IP Compliance).
+
+**EN-US — Senior Manager, Technical Lead & Digital Transformation Architect (AutoTech AI OS)** · Lorena, São Paulo, Brazil
+
+Technical leadership and governance; digital transformation and launch of insurance and tracking services for cars, heavy vehicles, motorcycles and machinery, driving over 60% growth. Architecture of AutoTech AI OS & Zezé da Regulagem (Python, LangGraph, pgvector, DevSecOps, LGPD/IP Compliance).
+
+### 2018 – Presente / Present | Credenciado Ituran Rastreadores
+
+**PT-BR — Especialista Técnico em Telemetria Satelital, Rastreamento & Cibersegurança Automotiva** · Lorena, São Paulo, Brasil
+
+Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras, com foco em segurança física/lógica de IoT/M2M e cibersegurança automotiva. Atuação em raio de 300 km de Lorena, SP.
+
+**EN-US — Technical Specialist in Satellite Telemetry, Tracking & Automotive Cybersecurity** · Lorena, São Paulo, Brazil
+
+Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers. Focus on IoT/M2M physical and logical security and automotive cybersecurity, within a 300 km radius of Lorena, SP.
+
+### 2003 – 2017 | Mecânica Rally 2
+
+**PT-BR — Fundador, Gestor & Especialista em Eletrônica Embarcada (ECU / EPROM / ADAS)** · Lorena, São Paulo, Brasil
+
+Reprogramação de módulos de injeção eletrônica (ECU) diretamente na memória EPROM (mapas de injeção, avanço de ignição, conversão de combustível na ECU), GNV (3ª, 5ª e 6ª geração com injeção direta), câmbio automático/automatizado, Air-Bag, ABS e sistemas ADAS, além da gestão integral do negócio e TI.
+
+**EN-US — Founder, Manager & Embedded Electronics Specialist (ECU / EPROM / ADAS)** · Lorena, São Paulo, Brazil
+
+ECU reprogramming directly in EPROM memory (injection maps, ignition timing and ECU fuel conversion); 3rd, 5th and 6th generation CNG with direct injection, automatic/automated transmissions, Air-Bag, ABS and ADAS. Full business and IT management.
+
+### 2003 – 2003 | Onlinet Provedor de Internet
+
+**PT-BR — Técnico de Infraestrutura de Redes, Servidores & Provimento de Acesso (UOL / Speedy Telefônica)** · Lorena, São Paulo, Brasil
+
+Administração de servidores de internet, configuração de redes, implantação de acesso Speedy (Telefônica) e suporte técnico.
+
+**EN-US — Network Infrastructure, Servers & Internet Access Technician (UOL / Speedy Telefônica)** · Lorena, São Paulo, Brazil
+
+Internet server administration, network configuration, Speedy (Telefônica) access deployment and technical support.
+
+### 2000 – 2002 | MBD Informática
+
+**PT-BR — Executivo de Implantação de Laboratório de Hardware, Redes & Desenvolvimento** · Lorena, São Paulo, Brasil
+
+Implantação da oficina de hardware (desktops, notebooks, impressoras), redes, programação, vendas técnicas e suporte. Site: loja.mbd.com.br.
+
+**EN-US — Hardware Laboratory, Networks & Development Deployment Executive** · Lorena, São Paulo, Brazil
+
+Deployed the hardware workshop (desktops, notebooks, printers), networks, programming, technical sales and support. Website: loja.mbd.com.br.
+
+### 1998 – 2000 | Informat Escola de Computação
+
+**PT-BR — Professor de Hardware, Infraestrutura & Pesquisador de Material Didático** · Lorena, São Paulo, Brasil
+
+Docência em hardware e redes, pesquisa tecnológica e desenvolvimento de material didático.
+
+**EN-US — Hardware & Infrastructure Instructor and Teaching Materials Researcher** · Lorena, São Paulo, Brazil
+
+Hardware and networking instruction, technology research and development of teaching materials.
+
+### 1997 – 2000 | Caas Computadores
+
+**PT-BR — Técnico de Hardware, Redes & Suporte de TI** · Lorena, São Paulo, Brasil
+
+Manutenção de computadores, notebooks e impressoras, cabeamento e configuração de redes e internet.
+
+**EN-US — Hardware, Networks & IT Support Technician** · Lorena, São Paulo, Brazil
+
+Computer, notebook and printer maintenance, cabling, network and internet configuration.
+
+### 1995 – 1996 | Mecânica Rally
+
+**PT-BR — Técnico em Mecatrônica & Diagnóstico de Injeção Eletrônica** · Lorena, São Paulo, Brasil
+
+Atuação no início da injeção eletrônica no Brasil, diagnóstico de sensores, atuadores e mecatrônica automotiva.
+
+**EN-US — Mechatronics & Electronic Fuel Injection Diagnostics Technician** · Lorena, São Paulo, Brazil
+
+Worked during the early adoption of electronic fuel injection in Brazil, diagnosing sensors, actuators and automotive mechatronics.
+
+### Formação acadêmica / Education
+
+| Instituição / Institution | PT-BR | EN-US | Período / Period |
+|---|---|---|---|
+| FACIC — Faculdade de Ciências Humanas de Cruzeiro | Bacharelado em Direito, 7º semestre | Law (LL.B.), 7th semester | 2023–2028 |
+| UCB — Universidade Católica de Brasília | CST em Segurança da Informação, 3º semestre | Technologist degree in Information Security, 3rd semester | 2025–2028 |
+| UNI VITÓRIA TEC | Curso Técnico em Mecatrônica, concluinte | Technical Diploma in Mechatronics, completing in 2026 | 2026–2026 |
+
+### Licenças e certificados / Licenses and certifications
+
+**7 certificados oficiais / 7 official certificates — 294 horas / hours.** Títulos oficiais preservados em português; tradução em inglês para leitura.
+
+### Programa Hackers do Bem — Formação em Cibersegurança: Curso Básico (64h)
+
+EN-US: Hackers do Bem — Cybersecurity Training: Basic Course.
+
+Emissor / Issuer: **SENAI São Paulo / RNP / Softex (MCTI)** · Emissão / Issued: **Março / March de 2026**.
+
+### Programa Hackers do Bem — Formação em Cibersegurança: Nivelamento (80h)
+
+EN-US: Hackers do Bem — Cybersecurity Training: Foundation.
+
+Emissor / Issuer: **SENAI São Paulo / RNP / Softex (MCTI)** · Emissão / Issued: **Março / March de 2026**.
+
+### Inteligência Artificial I — Conhecendo as Redes Neurais Artificiais (40h)
+
+EN-US: Artificial Intelligence I — Introduction to Artificial Neural Networks.
+
+Emissor / Issuer: **Instituto Federal do Triângulo Mineiro (IFTM)** · Emissão / Issued: **Agosto / August de 2026**.
+
+Aproveitamento / Score: **92,50%**.
+
+Credencial / Credential ID: `69a9cc0e-65e7-4f5e-81d8-09e6035856ef`.
+
+### Direito Autoral, Crimes Cibernéticos e Tributos Aplicados a Eventos (20h)
+
+EN-US: Copyright, Cybercrime and Taxes Applied to Events.
+
+Emissor / Issuer: **Instituto Federal do Rio Grande do Sul (IFRS)** · Emissão / Issued: **Abril / April de 2026**.
+
+Aproveitamento / Score: **84,17%**.
+
+Credencial / Credential ID: `8a86dfe9-8e5a-49a8-814b-c7c1bf3743c3`.
+
+### Curso Básico de Direito Espacial — 1ª Turma/2026 (20h)
+
+EN-US: Basic Space Law Course — 1st Class/2026.
+
+Emissor / Issuer: **Agência Espacial Brasileira (AEB / MCTI)** · Emissão / Issued: **Março / March de 2026**.
+
+### Windows Server 2016: Instalação e Administração (40h)
+
+EN-US: Windows Server 2016: Installation and Administration.
+
+Emissor / Issuer: **Instituto Federal do Rio Grande do Sul (IFRS)** · Emissão / Issued: **Maio / May de 2026**.
+
+Aproveitamento / Score: **89,38%**.
+
+Credencial / Credential ID: `0db92a03-21f7-4d6d-8d1c-e7839e596883`.
+
+### Inglês 2 (30h)
+
+EN-US: English 2.
+
+Emissor / Issuer: **Instituto Federal do Rio Grande do Sul (IFRS)** · Emissão / Issued: **Julho / July de 2026**.
+
+Aproveitamento / Score: **86,82%**.
+
+Credencial / Credential ID: `250475bb-2785-4d07-9087-e78063a96e8e`.
+
+
+## Conector LLM híbrido / Hybrid LLM connector
+
+Modo offline determinístico por padrão. `--live-llm` lê `OPENAI_API_KEY`, `GEMINI_API_KEY` ou `ANTHROPIC_API_KEY` em runtime, nessa ordem; `LLM_MODEL` substitui o modelo padrão do provedor. Nenhuma chave é persistida. Sem chave, erro de transporte ou resposta malformada: fallback offline. Saída insegura: recusa LLM05.
+
+Somente conteúdo dos fragmentos admitidos, sem PII detectada, e `source_audit_id` são enviados. Pergunta, tenant, imagens e metadados de origem ficam locais. TLS verificado, redirects recusados, timeout e limite de resposta. Os detectores de PII são heurísticos; revisão e anonimização na origem continuam necessárias. A chave autoriza processamento externo pelo provedor selecionado.
+
+Offline by default; `--live-llm` opts into API synthesis of approved evidence only. API keys are runtime-only. Transport failures fall back offline; unsafe output is refused. This showcase uses illustrative fixtures, lexical retrieval and a custom StateGraph; vision does not analyze pixels.
+
+Contratos das APIs: [OpenAI Chat Completions](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create), [Gemini generateContent](https://ai.google.dev/api/generate-content), [Anthropic Messages](https://platform.claude.com/docs/en/api/messages/create).

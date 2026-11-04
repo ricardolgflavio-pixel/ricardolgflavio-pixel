@@ -1,0 +1,157 @@
+{
+  "location": "Lorena, São Paulo, Brasil",
+  "experiences": [
+    {
+      "start": "2018",
+      "end": "",
+      "title": "Gestor Sênior, Responsável Técnico & Arquiteto de Transformação Digital (AutoTech AI OS)",
+      "company": "Mecânica Rally",
+      "description": "Liderança técnica e governança; transformação digital e implantação da vertical de seguros e rastreadores (linha leve, pesada, motos e máquinas), impulsionando a empresa em +60%. Arquitetura do AutoTech AI OS & Zezé da Regulagem (Python, LangGraph, pgvector, DevSecOps, LGPD/IP Compliance).",
+      "title_en": "Senior Manager, Technical Lead & Digital Transformation Architect (AutoTech AI OS)",
+      "description_en": "Technical leadership and governance; digital transformation and launch of insurance and tracking services for cars, heavy vehicles, motorcycles and machinery, driving over 60% growth. Architecture of AutoTech AI OS & Zezé da Regulagem (Python, LangGraph, pgvector, DevSecOps, LGPD/IP Compliance).",
+      "location": "Lorena, São Paulo, Brasil"
+    },
+    {
+      "start": "2018",
+      "end": "",
+      "title": "Especialista Técnico em Telemetria Satelital, Rastreamento & Cibersegurança Automotiva",
+      "company": "Credenciado Ituran Rastreadores",
+      "description": "Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras, com foco em segurança física/lógica de IoT/M2M e cibersegurança automotiva. Atuação em raio de 300 km de Lorena, SP.",
+      "title_en": "Technical Specialist in Satellite Telemetry, Tracking & Automotive Cybersecurity",
+      "description_en": "Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers. Focus on IoT/M2M physical and logical security and automotive cybersecurity, within a 300 km radius of Lorena, SP.",
+      "location": "Lorena, São Paulo, Brasil"
+    },
+    {
+      "start": "2003",
+      "end": "2017",
+      "title": "Fundador, Gestor & Especialista em Eletrônica Embarcada (ECU / EPROM / ADAS)",
+      "company": "Mecânica Rally 2",
+      "description": "Reprogramação de módulos de injeção eletrônica (ECU) diretamente na memória EPROM (mapas de injeção, avanço de ignição, conversão de combustível na ECU), GNV (3ª, 5ª e 6ª geração com injeção direta), câmbio automático/automatizado, Air-Bag, ABS e sistemas ADAS, além da gestão integral do negócio e TI.",
+      "title_en": "Founder, Manager & Embedded Electronics Specialist (ECU / EPROM / ADAS)",
+      "description_en": "ECU reprogramming directly in EPROM memory (injection maps, ignition timing and ECU fuel conversion); 3rd, 5th and 6th generation CNG with direct injection, automatic/automated transmissions, Air-Bag, ABS and ADAS. Full business and IT management.",
+      "location": "Lorena, São Paulo, Brasil"
+    },
+    {
+      "start": "2003",
+      "end": "2003",
+      "title": "Técnico de Infraestrutura de Redes, Servidores & Provimento de Acesso (UOL / Speedy Telefônica)",
+      "company": "Onlinet Provedor de Internet",
+      "description": "Administração de servidores de internet, configuração de redes, implantação de acesso Speedy (Telefônica) e suporte técnico.",
+      "title_en": "Network Infrastructure, Servers & Internet Access Technician (UOL / Speedy Telefônica)",
+      "description_en": "Internet server administration, network configuration, Speedy (Telefônica) access deployment and technical support.",
+      "location": "Lorena, São Paulo, Brasil"
+    },
+    {
+      "start": "2000",
+      "end": "2002",
+      "title": "Executivo de Implantação de Laboratório de Hardware, Redes & Desenvolvimento",
+      "company": "MBD Informática",
+      "description": "Implantação da oficina de hardware (desktops, notebooks, impressoras), redes, programação, vendas técnicas e suporte. Site: loja.mbd.com.br.",
+      "title_en": "Hardware Laboratory, Networks & Development Deployment Executive",
+      "description_en": "Deployed the hardware workshop (desktops, notebooks, printers), networks, programming, technical sales and support. Website: loja.mbd.com.br.",
+      "location": "Lorena, São Paulo, Brasil"
+    },
+    {
+      "start": "1998",
+      "end": "2000",
+      "title": "Professor de Hardware, Infraestrutura & Pesquisador de Material Didático",
+      "company": "Informat Escola de Computação",
+      "description": "Docência em hardware e redes, pesquisa tecnológica e desenvolvimento de material didático.",
+      "title_en": "Hardware & Infrastructure Instructor and Teaching Materials Researcher",
+      "description_en": "Hardware and networking instruction, technology research and development of teaching materials.",
+      "location": "Lorena, São Paulo, Brasil"
+    },
+    {
+      "start": "1997",
+      "end": "2000",
+      "title": "Técnico de Hardware, Redes & Suporte de TI",
+      "company": "Caas Computadores",
+      "description": "Manutenção de computadores, notebooks e impressoras, cabeamento e configuração de redes e internet.",
+      "title_en": "Hardware, Networks & IT Support Technician",
+      "description_en": "Computer, notebook and printer maintenance, cabling, network and internet configuration.",
+      "location": "Lorena, São Paulo, Brasil"
+    },
+    {
+      "start": "1995",
+      "end": "1996",
+      "title": "Técnico em Mecatrônica & Diagnóstico de Injeção Eletrônica",
+      "company": "Mecânica Rally",
+      "description": "Atuação no início da injeção eletrônica no Brasil, diagnóstico de sensores, atuadores e mecatrônica automotiva.",
+      "title_en": "Mechatronics & Electronic Fuel Injection Diagnostics Technician",
+      "description_en": "Worked during the early adoption of electronic fuel injection in Brazil, diagnosing sensors, actuators and automotive mechatronics.",
+      "location": "Lorena, São Paulo, Brasil"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Programa Hackers do Bem — Formação em Cibersegurança: Curso Básico",
+      "issuer": "SENAI São Paulo / RNP / Softex (MCTI)",
+      "hours": 64,
+      "month": 3,
+      "credential": "",
+      "grade": "",
+      "name_en": "Hackers do Bem — Cybersecurity Training: Basic Course",
+      "year": "2026"
+    },
+    {
+      "name": "Programa Hackers do Bem — Formação em Cibersegurança: Nivelamento",
+      "issuer": "SENAI São Paulo / RNP / Softex (MCTI)",
+      "hours": 80,
+      "month": 3,
+      "credential": "",
+      "grade": "",
+      "name_en": "Hackers do Bem — Cybersecurity Training: Foundation",
+      "year": "2026"
+    },
+    {
+      "name": "Inteligência Artificial I — Conhecendo as Redes Neurais Artificiais",
+      "issuer": "Instituto Federal do Triângulo Mineiro (IFTM)",
+      "hours": 40,
+      "month": 8,
+      "credential": "69a9cc0e-65e7-4f5e-81d8-09e6035856ef",
+      "grade": "92,50%",
+      "name_en": "Artificial Intelligence I — Introduction to Artificial Neural Networks",
+      "year": "2026"
+    },
+    {
+      "name": "Direito Autoral, Crimes Cibernéticos e Tributos Aplicados a Eventos",
+      "issuer": "Instituto Federal do Rio Grande do Sul (IFRS)",
+      "hours": 20,
+      "month": 4,
+      "credential": "8a86dfe9-8e5a-49a8-814b-c7c1bf3743c3",
+      "grade": "84,17%",
+      "name_en": "Copyright, Cybercrime and Taxes Applied to Events",
+      "year": "2026"
+    },
+    {
+      "name": "Curso Básico de Direito Espacial — 1ª Turma/2026",
+      "issuer": "Agência Espacial Brasileira (AEB / MCTI)",
+      "hours": 20,
+      "month": 3,
+      "credential": "",
+      "grade": "",
+      "name_en": "Basic Space Law Course — 1st Class/2026",
+      "year": "2026"
+    },
+    {
+      "name": "Windows Server 2016: Instalação e Administração",
+      "issuer": "Instituto Federal do Rio Grande do Sul (IFRS)",
+      "hours": 40,
+      "month": 5,
+      "credential": "0db92a03-21f7-4d6d-8d1c-e7839e596883",
+      "grade": "89,38%",
+      "name_en": "Windows Server 2016: Installation and Administration",
+      "year": "2026"
+    },
+    {
+      "name": "Inglês 2",
+      "issuer": "Instituto Federal do Rio Grande do Sul (IFRS)",
+      "hours": 30,
+      "month": 7,
+      "credential": "250475bb-2785-4d07-9087-e78063a96e8e",
+      "grade": "86,82%",
+      "name_en": "English 2",
+      "year": "2026"
+    }
+  ]
+}

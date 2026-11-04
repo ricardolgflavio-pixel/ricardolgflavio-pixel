@@ -11,5 +11,7 @@ reports/
 *.pem
 *.key
 .DS_Store
-scripts/
+scripts/*
+!scripts/linkedin_auto_config.py
+!scripts/linkedin_profile_data.json
 .linkedin_session/

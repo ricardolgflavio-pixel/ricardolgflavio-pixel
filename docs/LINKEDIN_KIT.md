@@ -4,7 +4,7 @@
 
 > Perfil-alvo: recrutadores de AppSec, DevSecOps, GRC/Privacidade, Direito Digital e Engenharia de IA.
 > Limites do LinkedIn respeitados: headline ≤ 220 caracteres · "Sobre" ≤ 2.600 · descrição de experiência ≤ 2.000 · posts ≤ 3.000.
-> Antes de publicar, confirme que cada afirmação reflete o estado real do seu projeto e ajuste os dados de contato.
+> Dados biográficos fornecidos pelo titular. Localização pública: **Lorena, São Paulo, Brasil**. Nunca incluir endereço residencial ou documentos pessoais.
 
 ## Índice
 
@@ -14,6 +14,10 @@
 4. [Competências (Skills)](#4-competências-skills)
 5. [Posts prontos](#5-posts-técnicos-prontos)
 6. [Checklist de perfil](#6-checklist-de-perfil)
+7. [Perfil em inglês](#7-perfil-em-inglês-idioma-secundário-foco-em-vagas-nos-eua)
+8. [Oito experiências profissionais](#8-trajetória-profissional--31-anos-desde-1995--career-history)
+9. [Formação acadêmica](#9-formação-acadêmica--education)
+10. [Licenças e certificados](#10-licenças-e-certificados--licenses-and-certifications)
 
 ---
 
@@ -22,7 +26,7 @@
 **Opção A — Híbrida: Direito Digital + AppSec** *(recomendada para vagas que pedem os dois perfis)*
 
 ```text
-Direito Digital & Segurança da Informação | Governança de IA, LGPD, DevSecOps & AppSec | Desenvolvedor Python (RAG / LangGraph) | Graduando em Direito (7º sem.) & Segurança da Informação (3º sem.) | Buscando estágio
+31 anos em Hardware, Redes & ECU/EPROM | DevSecOps, AppSec, IA & LGPD | Direito (7º sem.) + Seg. Informação (3º sem.) + Mecatrônica | Buscando estágio
 ```
 
 **Opção B — Foco técnico: DevSecOps / Engenharia de IA**
@@ -42,31 +46,25 @@ Direito (FACIC) + Segurança da Informação (UCB) | GRC, LGPD, Propriedade Inte
 ## 2. Seção "Sobre" (About)
 
 ```text
-Estudo Direito (7º semestre, FACIC Cruzeiro) e Segurança da Informação (3º semestre, UCB) e atuo onde as duas áreas se encontram: transformar exigências legais em controles técnicos que funcionam, são testados e deixam evidências.
+Tenho 31 anos de base prática, desde 1995, em Hardware, Redes, Eletrônica Embarcada Automotiva (ECU/EPROM/ADAS) e Telemetria Satelital. Vivo em Lorena, São Paulo, Brasil.
 
-Busco estágio em AppSec, DevSecOps, GRC/Privacidade, Direito Digital (LGPD, Governança de IA e Propriedade Intelectual) ou Engenharia de IA.
+Na Mecânica Rally, lidero a transformação digital e a implantação da vertical de seguros e rastreamento para linha leve, pesada, motos e máquinas, impulsionando a empresa em +60%. Sou credenciado Ituran desde 2018, com atuação técnica em raio de 300 km, diagnóstico de telemetria satelital/RF e segurança de IoT/M2M.
 
-O QUE EU CONSTRUO
-Sou o autor do AutoTech AI OS & Zezé da Regulagem, um SaaS B2B/B2C em monorepo para o mercado automotivo:
-• Orquestração multi-agente com LangGraph (diagnóstico mecânico, visão computacional e orçamentação comercial).
-• RAG semântico em PostgreSQL com pgvector.
-• Autenticação OAuth2 e gestão de segredos com Vault.
-• Validação estrita com Pydantic v2 e Mypy.
-• Pipeline de SAST com o "Guardião", um auditor próprio baseado em AST de Python, além de Bandit e Semgrep.
+Minha trajetória inclui reprogramação de ECU diretamente em EPROM, mapas de injeção e avanço, conversão de combustível, GNV, câmbios, Air-Bag, ABS e ADAS; também implantação de laboratórios de hardware, redes, servidores, provimento de internet e docência técnica.
 
-O DIFERENCIAL: COMPLIANCE AS CODE
-Desenhei o RAG sob a Lei de Direitos Autorais (9.610/98), a Lei do Software (9.609/98) e a LGPD. A arquitetura proíbe scraping de bases proprietárias fechadas e ingere apenas dados técnicos factuais (Ohms, Volts, bar, pinagem, códigos SAE/ISO OBD2, torques em Nm), catálogos abertos de fabricantes e telemetria própria (Ordens de Serviço e scanner OBD2). A regra jurídica virou schema Pydantic, teste e quality gate de CI.
+FORMAÇÃO
+• Direito — FACIC, 7º semestre (2023–2028).
+• CST em Segurança da Informação — UCB, 3º semestre (2025–2028).
+• Técnico em Mecatrônica — UNI VITÓRIA TEC, concluinte 2026.
+• 7 certificados oficiais, 294 horas: Hackers do Bem (básico e nivelamento), redes neurais, Direito Autoral e Crimes Cibernéticos, Direito Espacial, Windows Server e Inglês 2.
 
-COMO EU TRABALHO
-• Security & Privacy by Design: risco tratado no desenho, não depois.
-• OWASP Top 10 e OWASP Top 10 for LLM como linguagem comum entre times.
-• Documentação decisória (ADR/RFC) com matriz de risco e rastreabilidade normativa.
-• Código limpo, tipado e auditável.
+Sou autor do AutoTech AI OS & Zezé da Regulagem: ecossistema automotivo com Python, agentes LangGraph, RAG em PostgreSQL/pgvector, OAuth2/Vault e DevSecOps. No showcase público, demonstro o gate jurídico Pydantic, auditor AST, Bandit, Semgrep e validação de saída OWASP LLM05. O produto completo é privado e está em teste em oficina real.
 
-FERRAMENTAS
-Python, LangGraph, RAG, PostgreSQL, pgvector, FastAPI, Pydantic, Mypy, Bandit, Semgrep, GitHub Actions, OAuth2, Vault.
+Transformo requisitos de LGPD e propriedade intelectual em controles executáveis: origem auditada, dados factuais, bloqueio de fontes proprietárias fechadas e minimização de dados pessoais.
 
-Veja o portfólio técnico no GitHub (código, pipeline e ADR) e fale comigo para conversar sobre estágio e projetos em segurança, privacidade e IA responsável.
+Busco estágio em Segurança da Informação (AppSec, DevSecOps, Cibersegurança Automotiva, GRC), Direito Digital (LGPD, Governança de IA) ou Engenharia de IA. Também estou disponível para projetos e consultoria técnica.
+
+Portfólio: github.com/ricardolgflavio-pixel/ricardolgflavio-pixel
 ```
 
 ---
@@ -135,33 +133,25 @@ LGPD (Lei Geral de Proteção de Dados) · Direito Digital · Governança de IA 
 ### Post 1 — Apresentação profissional e busca por estágio
 
 ```text
-Direito e Segurança da Informação costumam ser tratados como mundos separados. Eu estudo os dois, e acredito que o futuro da área está no encontro entre eles.
+DA EPROM AO LANGGRAPH: 31 ANOS DE PRÁTICA APLICADOS À CIBERSEGURANÇA E GOVERNANÇA DE IA
 
-Hoje curso:
-⚖️ Direito, no 7º semestre (FACIC, Cruzeiro)
-🔐 Segurança da Informação, no 3º semestre (UCB, Brasília)
+Comecei em 1995, com diagnóstico de injeção eletrônica. Passei por hardware, redes, servidores, docência e reprogramação de ECU diretamente em EPROM: mapas de injeção, avanço e conversão de combustível.
 
-Por que a dupla formação faz diferença?
-Porque quem entende LGPD, Propriedade Intelectual e responsabilidade civil, e também sabe ler um relatório de SAST, consegue transformar uma exigência legal em um controle técnico que pode ser testado.
+Desde 2018, atuo como credenciado Ituran em telemetria satelital/RF e lidero a transformação digital da Mecânica Rally. A implantação da vertical de seguros e rastreamento contribuiu para +60% de crescimento da empresa.
 
-Apliquei isso no AutoTech AI OS & Zezé da Regulagem, meu projeto principal: um ecossistema para oficinas mecânicas, hoje em teste em uma oficina em Lorena-SP, que automatiza com IA o fluxo desde o primeiro atendimento ao cliente, passando pelo agendamento e pela operação no pátio, até a O.S. e a entrega do veículo. Ele reúne:
-• agentes de IA em LangGraph (diagnóstico, visão computacional e orçamentação);
-• RAG em PostgreSQL com pgvector;
-• OAuth2 e segredos no Vault;
-• pipeline DevSecOps com um auditor próprio baseado em AST, Bandit e Semgrep;
-• um RAG desenhado para respeitar a Lei 9.610/98, a Lei 9.609/98 e a LGPD.
+Essa base prática sustenta o AutoTech AI OS & Zezé da Regulagem, ecossistema em teste em oficina real:
+1. Hardware, ECU/EPROM & Telemetria Satelital.
+2. Multiagentes LangGraph + RAG em PostgreSQL/pgvector.
+3. Compliance as Code: origem auditada, LGPD e propriedade intelectual.
+4. Pipeline DevSecOps SAST: Guardião AST, Bandit e Semgrep.
 
-Agora estou em busca de estágio em:
-→ AppSec / DevSecOps
-→ GRC, Privacidade e LGPD
-→ Direito Digital e Governança de IA
-→ Engenharia de IA (Python, LangGraph, RAG)
+Hoje curso Direito (7º semestre, FACIC) e Segurança da Informação (3º semestre, UCB), além do Técnico em Mecatrônica (UNI VITÓRIA TEC, concluinte 2026). Concluí 7 certificados oficiais, somando 294 horas, em cibersegurança, IA, Direito, infraestrutura e inglês.
 
-Se a sua equipe precisa de alguém que fale a língua do jurídico e a da engenharia, vou adorar conversar.
+Busco estágio em AppSec, DevSecOps, Cibersegurança Automotiva, GRC, Direito Digital ou Engenharia de IA. Também estou disponível para projetos e consultoria técnica em Lorena, São Paulo, Brasil.
 
-O código, o pipeline e o documento de governança estão no meu GitHub (link no primeiro comentário).
+A vitrine pública reúne código executável, controles de segurança e governança com evidências. Link no primeiro comentário.
 
-#SegurancaDaInformacao #DireitoDigital #LGPD #DevSecOps #AppSec #GovernancaDeIA #Python #Estagio
+#Ciberseguranca #DevSecOps #AppSec #DireitoDigital #LGPD #GovernancaDeIA #LangGraph #Estagio
 ```
 
 ### Post 2 — Como construir RAG corporativo sem violar Direitos Autorais e PI
@@ -254,42 +244,36 @@ O código, o workflow de GitHub Actions e o ADR estão no meu GitHub, link no pr
 
 ## 7. Perfil em inglês (idioma secundário, foco em vagas nos EUA)
 
-> Cadastrado como segundo idioma do perfil (Configurações do perfil → Idioma). Recrutadores nos EUA veem esta versão automaticamente.
+> Texto para o idioma secundário English do perfil; a aplicação deve ser verificada na sessão autenticada.
 
 **Headline (EN)**
 
 ```text
-Law (LL.B., 7th sem.) & Information Security (3rd sem.) Student | AppSec, DevSecOps & AI Governance (LGPD/Privacy, IP) | Python, LangGraph, RAG | Seeking Internship
+31 Years in Hardware, Networks & ECU/EPROM | DevSecOps, AppSec, AI & LGPD | Law (7th sem.), Information Security (3rd sem.) & Mechatronics | Seeking Internship
 ```
 
 **About (EN)**
 
 ```text
-I study Law (LL.B., 7th semester, FACIC Cruzeiro) and Information Security (Technologist degree, 3rd semester, UCB Brasília), and I work where the two meet: turning legal requirements into technical controls that are tested and leave audit evidence.
+I bring 31 years of practical experience since 1995 in hardware, networks, automotive embedded electronics (ECU/EPROM/ADAS) and satellite telemetry. Based in Lorena, São Paulo, Brazil.
 
-I am looking for an internship in Application Security, DevSecOps, GRC/Privacy, Digital Law (data protection, AI governance, intellectual property) or AI Engineering.
+At Mecânica Rally, I lead digital transformation and the launch of insurance and vehicle-tracking services for cars, heavy vehicles, motorcycles and machinery, driving growth of over 60%. An accredited Ituran technical specialist since 2018, I work within a 300 km radius on satellite/RF telemetry, diagnostics and IoT/M2M security.
 
-WHAT I BUILD
-I am the author of AutoTech AI OS & Zezé da Regulagem, a B2B/B2C SaaS monorepo for the automotive aftermarket, currently being tested in a real repair shop in Brazil:
-• Multi-agent orchestration with LangGraph (mechanical diagnosis, computer vision, commercial quoting).
-• Semantic RAG on PostgreSQL with pgvector.
-• OAuth2 authentication and secrets management with Vault.
-• Strict validation with Pydantic v2 and Mypy.
-• A SAST pipeline with "Guardião", my own Python AST-based auditor, plus Bandit and Semgrep.
+My background includes ECU reprogramming directly in EPROM memory, injection and ignition maps, fuel conversion, CNG systems, transmissions, Air-Bag, ABS and ADAS; hardware laboratory deployment, networks, internet servers and technical teaching.
 
-MY EDGE: COMPLIANCE AS CODE
-I designed the RAG under Brazil's Copyright Law (9.610/98), Software Law (9.609/98) and LGPD (Brazil's GDPR-style data protection law). The architecture forbids scraping closed proprietary databases and ingests only factual technical data (ohms, volts, bar, pinouts, SAE/ISO OBD2 codes, torque in Nm), open manufacturer catalogs and first-party telemetry. The legal rule became a Pydantic schema, a test and a CI quality gate.
+EDUCATION
+• Law, LL.B. — FACIC, 7th semester (2023–2028).
+• Information Security, Technologist degree — UCB, 3rd semester (2025–2028).
+• Technical Diploma in Mechatronics — UNI VITÓRIA TEC, completing in 2026.
+• 7 official certificates totaling 294 hours: Hackers do Bem (basic and foundation), neural networks, copyright and cybercrime, space law, Windows Server and English 2.
 
-HOW I WORK
-• Security & Privacy by Design: risk handled at design time, not afterwards.
-• OWASP Top 10 and OWASP Top 10 for LLM Applications as a shared language across teams.
-• Decision records (ADR/RFC) with risk matrix and traceability from law to control.
-• Clean, typed, auditable code.
+I created AutoTech AI OS & Zezé da Regulagem: an automotive ecosystem using Python, LangGraph agents, PostgreSQL/pgvector RAG, OAuth2/Vault and DevSecOps. The public showcase demonstrates a Pydantic legal ingestion gate, an AST auditor, Bandit, Semgrep and OWASP LLM05 output validation. The full product is private and under testing in a real repair shop.
 
-TOOLS
-Python, LangGraph, RAG, PostgreSQL, pgvector, FastAPI, Pydantic, Mypy, Bandit, Semgrep, GitHub Actions, OAuth2, Vault.
+I translate LGPD and intellectual-property requirements into executable controls: audited provenance, factual data, blocked closed proprietary sources and personal-data minimization.
 
-Code, CI pipeline and governance ADR are on my GitHub: github.com/ricardolgflavio-pixel
+Seeking internships in Information Security (AppSec, DevSecOps, Automotive Cybersecurity, GRC), Digital Law (LGPD, AI Governance) or AI Engineering. Also available for technical projects and consulting.
+
+Portfolio: github.com/ricardolgflavio-pixel/ricardolgflavio-pixel
 ```
 
 **Project (EN)**
@@ -321,3 +305,171 @@ LEGAL RESULT
 
 Stack: Python, LangGraph, FastAPI, PostgreSQL, pgvector, Pydantic, Mypy, Bandit, Semgrep, GitHub Actions, OAuth2, Vault.
 ```
+
+## 8. Trajetória profissional — 31 anos desde 1995 / Career history
+
+### 2018 – Presente / Present | Mecânica Rally
+
+**PT-BR — Gestor Sênior, Responsável Técnico & Arquiteto de Transformação Digital (AutoTech AI OS)** · Lorena, São Paulo, Brasil
+
+Liderança técnica e governança; transformação digital e implantação da vertical de seguros e rastreadores (linha leve, pesada, motos e máquinas), impulsionando a empresa em +60%. Arquitetura do AutoTech AI OS & Zezé da Regulagem (Python, LangGraph, pgvector, DevSecOps, LGPD/IP Compliance).
+
+**EN-US — Senior Manager, Technical Lead & Digital Transformation Architect (AutoTech AI OS)** · Lorena, São Paulo, Brazil
+
+Technical leadership and governance; digital transformation and launch of insurance and tracking services for cars, heavy vehicles, motorcycles and machinery, driving over 60% growth. Architecture of AutoTech AI OS & Zezé da Regulagem (Python, LangGraph, pgvector, DevSecOps, LGPD/IP Compliance).
+
+### 2018 – Presente / Present | Credenciado Ituran Rastreadores
+
+**PT-BR — Especialista Técnico em Telemetria Satelital, Rastreamento & Cibersegurança Automotiva** · Lorena, São Paulo, Brasil
+
+Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras, com foco em segurança física/lógica de IoT/M2M e cibersegurança automotiva. Atuação em raio de 300 km de Lorena, SP.
+
+**EN-US — Technical Specialist in Satellite Telemetry, Tracking & Automotive Cybersecurity** · Lorena, São Paulo, Brazil
+
+Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers. Focus on IoT/M2M physical and logical security and automotive cybersecurity, within a 300 km radius of Lorena, SP.
+
+### 2003 – 2017 | Mecânica Rally 2
+
+**PT-BR — Fundador, Gestor & Especialista em Eletrônica Embarcada (ECU / EPROM / ADAS)** · Lorena, São Paulo, Brasil
+
+Reprogramação de módulos de injeção eletrônica (ECU) diretamente na memória EPROM (mapas de injeção, avanço de ignição, conversão de combustível na ECU), GNV (3ª, 5ª e 6ª geração com injeção direta), câmbio automático/automatizado, Air-Bag, ABS e sistemas ADAS, além da gestão integral do negócio e TI.
+
+**EN-US — Founder, Manager & Embedded Electronics Specialist (ECU / EPROM / ADAS)** · Lorena, São Paulo, Brazil
+
+ECU reprogramming directly in EPROM memory (injection maps, ignition timing and ECU fuel conversion); 3rd, 5th and 6th generation CNG with direct injection, automatic/automated transmissions, Air-Bag, ABS and ADAS. Full business and IT management.
+
+### 2003 – 2003 | Onlinet Provedor de Internet
+
+**PT-BR — Técnico de Infraestrutura de Redes, Servidores & Provimento de Acesso (UOL / Speedy Telefônica)** · Lorena, São Paulo, Brasil
+
+Administração de servidores de internet, configuração de redes, implantação de acesso Speedy (Telefônica) e suporte técnico.
+
+**EN-US — Network Infrastructure, Servers & Internet Access Technician (UOL / Speedy Telefônica)** · Lorena, São Paulo, Brazil
+
+Internet server administration, network configuration, Speedy (Telefônica) access deployment and technical support.
+
+### 2000 – 2002 | MBD Informática
+
+**PT-BR — Executivo de Implantação de Laboratório de Hardware, Redes & Desenvolvimento** · Lorena, São Paulo, Brasil
+
+Implantação da oficina de hardware (desktops, notebooks, impressoras), redes, programação, vendas técnicas e suporte. Site: loja.mbd.com.br.
+
+**EN-US — Hardware Laboratory, Networks & Development Deployment Executive** · Lorena, São Paulo, Brazil
+
+Deployed the hardware workshop (desktops, notebooks, printers), networks, programming, technical sales and support. Website: loja.mbd.com.br.
+
+### 1998 – 2000 | Informat Escola de Computação
+
+**PT-BR — Professor de Hardware, Infraestrutura & Pesquisador de Material Didático** · Lorena, São Paulo, Brasil
+
+Docência em hardware e redes, pesquisa tecnológica e desenvolvimento de material didático.
+
+**EN-US — Hardware & Infrastructure Instructor and Teaching Materials Researcher** · Lorena, São Paulo, Brazil
+
+Hardware and networking instruction, technology research and development of teaching materials.
+
+### 1997 – 2000 | Caas Computadores
+
+**PT-BR — Técnico de Hardware, Redes & Suporte de TI** · Lorena, São Paulo, Brasil
+
+Manutenção de computadores, notebooks e impressoras, cabeamento e configuração de redes e internet.
+
+**EN-US — Hardware, Networks & IT Support Technician** · Lorena, São Paulo, Brazil
+
+Computer, notebook and printer maintenance, cabling, network and internet configuration.
+
+### 1995 – 1996 | Mecânica Rally
+
+**PT-BR — Técnico em Mecatrônica & Diagnóstico de Injeção Eletrônica** · Lorena, São Paulo, Brasil
+
+Atuação no início da injeção eletrônica no Brasil, diagnóstico de sensores, atuadores e mecatrônica automotiva.
+
+**EN-US — Mechatronics & Electronic Fuel Injection Diagnostics Technician** · Lorena, São Paulo, Brazil
+
+Worked during the early adoption of electronic fuel injection in Brazil, diagnosing sensors, actuators and automotive mechatronics.
+
+## 9. Formação acadêmica / Education
+
+| Instituição / Institution | PT-BR | EN-US | Período / Period |
+|---|---|---|---|
+| FACIC — Faculdade de Ciências Humanas de Cruzeiro | Bacharelado em Direito, 7º semestre | Law (LL.B.), 7th semester | 2023–2028 |
+| UCB — Universidade Católica de Brasília | CST em Segurança da Informação, 3º semestre | Technologist degree in Information Security, 3rd semester | 2025–2028 |
+| UNI VITÓRIA TEC | Curso Técnico em Mecatrônica, concluinte | Technical Diploma in Mechatronics, completing in 2026 | 2026–2026 |
+
+## 10. Licenças e certificados / Licenses and certifications
+
+**7 certificados oficiais / 7 official certificates — 294 horas / hours.** Títulos oficiais preservados em português; tradução em inglês para leitura.
+
+### Programa Hackers do Bem — Formação em Cibersegurança: Curso Básico (64h)
+
+EN-US: Hackers do Bem — Cybersecurity Training: Basic Course.
+
+Emissor / Issuer: **SENAI São Paulo / RNP / Softex (MCTI)** · Emissão / Issued: **Março / March de 2026**.
+
+### Programa Hackers do Bem — Formação em Cibersegurança: Nivelamento (80h)
+
+EN-US: Hackers do Bem — Cybersecurity Training: Foundation.
+
+Emissor / Issuer: **SENAI São Paulo / RNP / Softex (MCTI)** · Emissão / Issued: **Março / March de 2026**.
+
+### Inteligência Artificial I — Conhecendo as Redes Neurais Artificiais (40h)
+
+EN-US: Artificial Intelligence I — Introduction to Artificial Neural Networks.
+
+Emissor / Issuer: **Instituto Federal do Triângulo Mineiro (IFTM)** · Emissão / Issued: **Agosto / August de 2026**.
+
+Aproveitamento / Score: **92,50%**.
+
+Credencial / Credential ID: `69a9cc0e-65e7-4f5e-81d8-09e6035856ef`.
+
+### Direito Autoral, Crimes Cibernéticos e Tributos Aplicados a Eventos (20h)
+
+EN-US: Copyright, Cybercrime and Taxes Applied to Events.
+
+Emissor / Issuer: **Instituto Federal do Rio Grande do Sul (IFRS)** · Emissão / Issued: **Abril / April de 2026**.
+
+Aproveitamento / Score: **84,17%**.
+
+Credencial / Credential ID: `8a86dfe9-8e5a-49a8-814b-c7c1bf3743c3`.
+
+### Curso Básico de Direito Espacial — 1ª Turma/2026 (20h)
+
+EN-US: Basic Space Law Course — 1st Class/2026.
+
+Emissor / Issuer: **Agência Espacial Brasileira (AEB / MCTI)** · Emissão / Issued: **Março / March de 2026**.
+
+### Windows Server 2016: Instalação e Administração (40h)
+
+EN-US: Windows Server 2016: Installation and Administration.
+
+Emissor / Issuer: **Instituto Federal do Rio Grande do Sul (IFRS)** · Emissão / Issued: **Maio / May de 2026**.
+
+Aproveitamento / Score: **89,38%**.
+
+Credencial / Credential ID: `0db92a03-21f7-4d6d-8d1c-e7839e596883`.
+
+### Inglês 2 (30h)
+
+EN-US: English 2.
+
+Emissor / Issuer: **Instituto Federal do Rio Grande do Sul (IFRS)** · Emissão / Issued: **Julho / July de 2026**.
+
+Aproveitamento / Score: **86,82%**.
+
+Credencial / Credential ID: `250475bb-2785-4d07-9087-e78063a96e8e`.
+
+## 11. Automação e conferência
+
+O script lê os textos deste kit e os registros estruturados em `scripts/linkedin_profile_data.json`. Usa a sessão persistente `/tmp/linkedin_profile_session`; não lê senhas ou exporta cookies. O modo batch exige sessão autenticada e retorna erro se qualquer ação falhar.
+
+```bash
+/tmp/li_venv/bin/python -B scripts/linkedin_auto_config.py --batch --headless --only S,M,J,T,V,U
+/tmp/li_venv/bin/python -B scripts/linkedin_auto_config.py --batch --headless --only X,A
+/tmp/li_venv/bin/python -B scripts/linkedin_auto_config.py --render-card
+```
+
+`S`: localização; `M`/`J`: Sobre PT-BR/EN-US; `T`: experiências; `V`: Mecatrônica; `U`: certificados. Os cadastros consultam o perfil antes de adicionar para evitar duplicatas. `X` remove meses automáticos das experiências, pois o titular forneceu somente anos; `A` restaura e confere a headline após alterações de cargos pelo LinkedIn.
+
+A ação **W publica** o Post 1 com o card de `assets/linkedin_post_card.html`, aguarda o preview e comenta o link do GitHub na URL da nova publicação. O recibo em `/tmp/linkedin_post_receipt.json` permite retomar o comentário sem republicar. A ação C mantém o comportamento de rascunho. `--no-save` preenche os formulários sem enviar.
+
+[Publicação com card e vitrine técnica](https://www.linkedin.com/feed/update/urn:li:activity:7523601679770869761/).
