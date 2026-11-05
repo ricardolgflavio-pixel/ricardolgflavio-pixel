@@ -6,13 +6,24 @@ from pathlib import Path
 from types import SimpleNamespace
 import sys
 import unittest
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock, patch, call
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import linkedin_auto_config as li
 
 
 class SeoDecisionTests(unittest.TestCase):
+    def test_job_added_share_prompt_is_closed_without_publishing(self):
+        dialog, page = MagicMock(), MagicMock()
+        dialog.wait_for.side_effect = li.PlaywrightTimeout('dialog replaced by share prompt')
+        dialog.inner_text.return_value = 'Cargo adicionado. Agora, compartilhe esta atualização com sua rede.'
+        self.assertTrue(li._save_and_wait(dialog, page))
+        patterns = [request.kwargs['name'].pattern for request in dialog.get_by_role.call_args_list]
+        self.assertEqual(len(patterns), 2)
+        self.assertIn('Salvar', patterns[0])
+        self.assertIn('Fechar', patterns[1])
+        self.assertTrue(all('Publicar' not in pattern for pattern in patterns))
+
     def test_missing_project_date_does_not_create_position(self):
         page = MagicMock()
         with patch.object(li, '_seo_entry', return_value=None), patch.object(
@@ -29,6 +40,35 @@ class SeoDecisionTests(unittest.TestCase):
             with self.assertRaises(li.PlaywrightError):
                 li.action_seo_position(MagicMock(), SimpleNamespace(seo_start_year='2026x'), True)
             create.assert_not_called()
+
+    def test_confirmed_month_is_not_replaced_by_default_month(self):
+        dialog = MagicMock()
+        year_field, month_field, current = MagicMock(), MagicMock(), MagicMock()
+        dialog.get_by_label.side_effect = lambda label, **kwargs: {
+            'Ano de início': year_field,
+            'Mês de início': month_field,
+            'Trabalho aqui atualmente': current,
+        }[label]
+        configured = {'seo_primary_position': {'start_year': '2026', 'start_month': '1'}}
+        with patch.object(li, '_profile_data', return_value=configured), patch.object(
+            li, '_seo_entry', return_value=None
+        ), patch.object(li, '_open_dialog', return_value=dialog), patch.object(
+            li, '_plain_field'
+        ), patch.object(li, '_set_checkbox'), patch.object(li, '_type_rich'), patch.object(
+            li, '_seo_dates'
+        ), patch.object(li, '_save_and_wait') as save:
+            self.assertTrue(li.action_seo_position(MagicMock(), SimpleNamespace(seo_start_year=None), False))
+        self.assertEqual(month_field.select_option.call_args_list[-1], call('1'))
+        year_field.select_option.assert_called_with('2026')
+        save.assert_not_called()
+
+    def test_invalid_confirmed_month_does_not_open_form(self):
+        configured = {'seo_primary_position': {'start_year': '2026', 'start_month': '13'}}
+        with patch.object(li, '_profile_data', return_value=configured), patch.object(
+            li, '_open_dialog'
+        ) as create, self.assertRaises(li.PlaywrightError):
+            li.action_seo_position(MagicMock(), SimpleNamespace(seo_start_year=None), True)
+        create.assert_not_called()
 
     def test_company_is_matched_as_exact_line(self):
         page = MagicMock()

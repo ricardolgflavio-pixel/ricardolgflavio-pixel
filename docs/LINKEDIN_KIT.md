@@ -450,7 +450,7 @@ A ação **W publica** o Post 1 com o card de `assets/linkedin_post_card.html`, 
 **Empresa/projeto:** AutoTech AI OS — Cibersegurança, DevSecOps & IA.
 **Título internacional:** AI, DevSecOps & Legal Governance Architect (LGPD).
 
-A experiência AutoTech deve ser própria e ficar no topo das experiências atuais. O vínculo da Mecânica Rally permanece separado; sua data de início não deve ser atribuída ao projeto AutoTech. A criação de uma nova experiência exige o ano real informado pelo titular, via `--seo-start-year ANO` ou `seo_primary_position.start_year` no cadastro local. Sem esse dado, a ação falha e não inventa uma data. Meses não informados são removidos, inclusive quando o editor os preenche automaticamente.
+A experiência AutoTech deve ser própria e ficar no topo das experiências atuais. O vínculo da Mecânica Rally permanece separado; sua data de início não deve ser atribuída ao projeto AutoTech. A criação de uma nova experiência exige o ano real informado pelo titular, via `--seo-start-year ANO` ou `seo_primary_position.start_year` no cadastro local. Sem esse dado, a ação falha e não inventa uma data. O início real confirmado pelo titular é **janeiro de 2026** (`start_year: "2026"`, `start_month: "1"`). Meses não informados em outros vínculos são removidos, inclusive quando o editor os preenche automaticamente.
 
 A experiência Ituran é mantida como **Técnico em Telemetria Satelital & Rastreamento Veicular (IoT)**, com o título internacional **Satellite Telemetry & Vehicle Tracking Technician (IoT)** e a cronologia original. Não encerrar o vínculo para retirá-lo da introdução.
 
@@ -470,7 +470,7 @@ A experiência Ituran é mantida como **Técnico em Telemetria Satelital & Rastr
 /tmp/li_venv/bin/python -B scripts/linkedin_auto_config.py --batch --headless --only OG
 ```
 
-Substituir `ANO` pelo dado real do titular. Executar a etapa seguinte somente se a anterior passar. `IT`: título técnico Ituran PT/EN; `PR`: experiência AutoTech PT/EN, sem duplicação; `OR`: hierarquia persistida; `IN`: posição e escola na introdução, com headlines preservadas; `HI`: ocultar a empresa operacional enquanto o início real do projeto não estiver informado, sem encerrar os vínculos; `OG`: envio ao Post Inspector e conferência do resultado. `--no-save` permite preencher sem enviar; na reordenação ele não move os cargos.
+O cadastro local já contém janeiro de 2026, confirmado pelo titular. A opção `--seo-start-year ANO` serve para uma alteração explícita do ano; o mês real é lido de `seo_primary_position.start_month`. Executar a etapa seguinte somente se a anterior passar. `IT`: título técnico Ituran PT/EN; `PR`: experiência AutoTech PT/EN, sem duplicação; `OR`: hierarquia persistida; `IN`: posição e escola na introdução, com headlines preservadas; `HI`: ocultar a empresa operacional enquanto o início real do projeto não estiver informado, sem encerrar os vínculos; `OG`: envio ao Post Inspector e conferência do resultado. `--no-save` permite preencher sem enviar; na reordenação ele não move os cargos.
 
 ### O que o Post Inspector pode comprovar
 
@@ -478,13 +478,13 @@ O script abre `https://www.linkedin.com/post-inspector/`, envia somente a URL p�
 
 A seleção de posição e a hierarquia são controles do perfil, não controle direto sobre o algoritmo de metadados do LinkedIn. O envio ao Inspector solicita nova coleta; sucesso deve ser confirmado no resultado efetivamente exibido. Se a página estiver indisponível ao coletor ou continuar mostrando Ituran, relatar a limitação sem afirmar que o cache foi limpo. O cache do WhatsApp é independente; o Inspector não oferece garantia de invalidação imediata em aplicativos de terceiros.
 
-### Verificação registrada em 05/11/2026
+### Verificação inicial em 05/11/2026
 
 - Cargo Ituran atualizado em português e inglês; mantido **2018–presente**, sem mês presumido.
 - Empresa operacional ocultada no seletor da introdução com a ação `HI`; UCB mantida como formação em destaque e headlines PT/EN preservadas.
 - A aba English usa a configuração compartilhada de empresa/formação do perfil principal na interface observada.
 - A coleta do Post Inspector informou **“a few seconds ago”**, mas o campo Title ainda retornou **“Ricardo Luiz G. Flávio - Credenciado Ituran Rastreadores | LinkedIn”**. Isso registra uma tentativa de atualização, não comprova invalidação do cache público nem do WhatsApp.
-- A nova experiência AutoTech e sua promoção ao topo aguardam o **ano real de início do projeto**, solicitado ao titular. `seo_primary_position.start_year` permanece `null`; nenhum emprego ou início foi fabricado. O histórico da Mecânica Rally foi preservado.
+- Na primeira tentativa, a experiência AutoTech ficou pendente de data. O titular confirmou depois **01/2026**: janeiro de 2026 foi registrado no cadastro local para criar a experiência própria, mantendo o histórico da Mecânica Rally separado.
 
 Os testes de decisões SEO podem ser executados localmente, sem navegador ou rede:
 
@@ -492,4 +492,16 @@ Os testes de decisões SEO podem ser executados localmente, sem navegador ou red
 /tmp/li_venv/bin/python -B -m unittest discover -s tests -v
 ```
 
-Validação local desta alteração: dez testes de decisões SEO e Mypy estrito em `showcase`. A inspeção adicional de Bandit no script de automação identifica quatro referências temporárias preexistentes (sessão, banner, card e recibo de publicação); esses caminhos não foram alterados nesta correção. O novo recibo SEO fica dentro do diretório privado da sessão, cuja permissão é verificada antes da gravação. O workflow principal continua limitado ao escopo `showcase`.
+Validação local desta retomada: treze testes de decisões SEO, incluindo preservação de janeiro de 2026 e fechamento do convite de compartilhamento após cadastro e Mypy estrito em `showcase`. A inspeção adicional de Bandit no script de automação identifica quatro referências temporárias preexistentes (sessão, banner, card e recibo de publicação); esses caminhos não foram alterados nesta correção. O novo recibo SEO fica dentro do diretório privado da sessão, cuja permissão é verificada antes da gravação. O workflow principal continua limitado ao escopo `showcase`.
+
+### Resultado após confirmação de janeiro de 2026
+
+O titular confirmou o início **01/2026**. Foi cadastrada e conferida uma experiência própria AutoTech, com o título PT-BR e sua versão inglesa, início em janeiro de 2026 e vínculo atual. Os vínculos anteriores da Mecânica Rally e da Ituran foram mantidos separados.
+
+As ações `OR` e `IN` confirmaram AutoTech no primeiro lugar da hierarquia e como posição selecionada na introdução. A formação UCB e as headlines oficiais PT/EN foram preservadas; a aba English mantém a configuração compartilhada de empresa e formação observada nessa interface.
+
+Uma nova consulta ao Post Inspector confirmou o campo **Title**:
+
+> Ricardo Luiz G. Flávio - AutoTech AI OS — Cibersegurança, DevSecOps & IA | LinkedIn
+
+A menção à Ituran foi eliminada do título observado. O formato público usa o nome da empresa/projeto, enquanto o cargo de arquitetura fica selecionado na introdução. Esse é o resultado efetivamente retornado pelo LinkedIn, sem simulação de tags ou título no navegador. O resultado não garante atualização imediata do cache próprio do WhatsApp.

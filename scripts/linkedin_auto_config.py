@@ -385,7 +385,17 @@ def _save_and_wait(dialog: Locator, page: Page) -> bool:
     try:
         dialog.wait_for(state="hidden", timeout=20000)
     except PlaywrightTimeout:
-        raise PlaywrightError("Formulário permaneceu aberto após Salvar: " + dialog.inner_text()[-1600:]) from None
+        message = dialog.inner_text()
+        if re.search(r"Cargo adicionado|Position added|Experience added", message, re.I):
+            # O cadastro terminou e o LinkedIn abriu um convite de publicação separado.
+            # Fechar o convite; publicar não faz parte de salvar uma experiência.
+            close = dialog.get_by_role("button", name=re.compile(r"^(Fechar|Close|Dispensar|Dismiss)$", re.I)).first
+            if close.count():
+                close.click(timeout=10000)
+            else:
+                page.keyboard.press("Escape")
+        else:
+            raise PlaywrightError("Formulário permaneceu aberto após Salvar: " + message[-1600:]) from None
     page.wait_for_timeout(1500)
     return True
 
@@ -1168,10 +1178,13 @@ def action_seo_ituran(page: Page, texts: Texts, save: bool) -> bool:
 
 
 def action_seo_position(page: Page, texts: Texts, save: bool) -> bool:
+    configured = _profile_data().get("seo_primary_position", {})
+    year = texts.seo_start_year or configured.get("start_year")
+    month = configured.get("start_month")
+    if month is not None and str(month) not in {str(n) for n in range(1, 13)}:
+        raise PlaywrightError("Mês de início AutoTech inválido; esperado 1 a 12.")
     entry = _seo_entry(page, SEO_COMPANY)
     if entry is None:
-        configured = _profile_data().get("seo_primary_position", {})
-        year = texts.seo_start_year or configured.get("start_year")
         if year is None or re.fullmatch(r"(?:19|20)\d{2}", str(year)) is None:
             raise PlaywrightError("Falta ano real do AutoTech: informe --seo-start-year ANO; não reutilizar 2018 da Mecânica Rally.")
         dialog = _open_dialog(page, PROFILE_URL + "edit/forms/position/new/", 'input:not([type]),input[type="text"]')
@@ -1190,6 +1203,7 @@ def action_seo_position(page: Page, texts: Texts, save: bool) -> bool:
         )
         _type_rich(dialog.locator('[role="textbox"],textarea').first, description)
         _seo_dates(dialog, str(year))
+        dialog.get_by_label("Mês de início", exact=False).select_option(str(month) if month is not None else "")
         if not save:
             return True
         _save_and_wait(dialog, page)
@@ -1204,6 +1218,9 @@ def action_seo_position(page: Page, texts: Texts, save: bool) -> bool:
         dialog.wait_for(state="visible", timeout=30000)
         _plain_field(dialog.locator('input:not([type]),input[type="text"]').first, SEO_POSITION)
         _seo_dates(dialog, original)
+        if year is not None:
+            dialog.get_by_label("Ano de início", exact=False).select_option(str(year))
+            dialog.get_by_label("Mês de início", exact=False).select_option(str(month) if month is not None else "")
         if not save:
             return True
         _save_and_wait(dialog, page)
@@ -1213,8 +1230,13 @@ def action_seo_position(page: Page, texts: Texts, save: bool) -> bool:
     original = entry.inner_text()
     target = entry.evaluate("element => element.href")
     _seo_translate_position(page, target, SEO_POSITION_EN)
-    _seo_verify_dates(page, SEO_COMPANY, original)
-    _seo_record("primary_position", {"title": SEO_POSITION, "title_en": SEO_POSITION_EN, "company": SEO_COMPANY})
+    entry = _seo_verify_dates(page, SEO_COMPANY, original)
+    if year is not None and month is not None:
+        abbreviation = ("jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez")[int(month) - 1]
+        if not re.search(r"\b" + abbreviation + r"\. de " + re.escape(str(year)) + r"\b", entry.inner_text(), re.I):
+            raise PlaywrightError("Mês/ano real do AutoTech não persistiu após a tradução.")
+    _seo_record("primary_position", {"title": SEO_POSITION, "title_en": SEO_POSITION_EN, "company": SEO_COMPANY,
+                                      "start_year": year, "start_month": month})
     return True
 
 
@@ -1352,7 +1374,8 @@ def action_seo_inspector(page: Page, texts: Texts, save: bool) -> bool:
     visible = page.locator("body").inner_text()
     # Coletar somente a resposta visível do Inspector; não confundir title da sessão com OG público.
     title = _seo_inspector_title(visible)
-    _seo_record("post_inspector", {"url": page.url, "title": title, "visible_result": visible[:18000]})
+    _seo_record("post_inspector", {"url": page.url, "title": title,
+                                   "confirmed_target_title": _seo_title_matches(title), "visible_result": visible[:18000]})
     log("Resposta do Post Inspector registrada em " + str(SEO_RECEIPT))
     if title and re.search(r"Ituran", title, re.I):
         raise PlaywrightError("Post Inspector ainda contém Ituran; atualização pública não foi confirmada.")
