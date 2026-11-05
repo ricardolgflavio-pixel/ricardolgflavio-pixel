@@ -14,11 +14,11 @@
     {
       "start": "2018",
       "end": "",
-      "title": "Especialista Técnico em Telemetria Satelital, Rastreamento & Cibersegurança Automotiva",
+      "title": "Técnico em Telemetria Satelital & Rastreamento Veicular (IoT)",
       "company": "Credenciado Ituran Rastreadores",
-      "description": "Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras, com foco em segurança física/lógica de IoT/M2M e cibersegurança automotiva. Atuação em raio de 300 km de Lorena, SP.",
-      "title_en": "Technical Specialist in Satellite Telemetry, Tracking & Automotive Cybersecurity",
-      "description_en": "Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers. Focus on IoT/M2M physical and logical security and automotive cybersecurity, within a 300 km radius of Lorena, SP.",
+      "description": "Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras. Atuação em raio de 300 km de Lorena, SP. Base prática em eletrônica e telemetria aplicada à transição estratégica para estudos de Cibersegurança Automotiva/IoT; não apresentada como especialização profissional já estabelecida nessa área.",
+      "title_en": "Satellite Telemetry & Vehicle Tracking Technician (IoT)",
+      "description_en": "Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers within a 300 km radius of Lorena, SP. This practical electronics and telemetry background supports a strategic transition into Automotive/IoT Cybersecurity studies; it is not presented as established professional specialization in cybersecurity.",
       "location": "Lorena, São Paulo, Brasil"
     },
     {
@@ -153,5 +153,12 @@
       "name_en": "English 2",
       "year": "2026"
     }
-  ]
+  ],
+  "seo_primary_position": {
+    "title": "Arquiteto de IA, DevSecOps & Governança Jurídica (LGPD)",
+    "title_en": "AI, DevSecOps & Legal Governance Architect (LGPD)",
+    "company": "AutoTech AI OS — Cibersegurança, DevSecOps & IA",
+    "start_year": null,
+    "date_policy": "Início do projeto pendente de informação do titular; não reutilizar datas dos vínculos Mecânica Rally ou Ituran."
+  }
 }

@@ -16,31 +16,39 @@
 > **Bacharelado em Direito** — FACIC, Cruzeiro (7º semestre) · **Graduação em Segurança da Informação** — UCB, Universidade
 > Católica de Brasília (3º semestre) · **Em busca de estágio** em AppSec, DevSecOps, GRC, Direito Digital e Engenharia de IA.
 
-**Lorena, São Paulo, Brasil** · **31 anos de prática desde 1995** em Hardware, Redes, Eletrônica Embarcada Automotiva (ECU/EPROM/ADAS) e Telemetria Satelital.
+**Lorena, São Paulo, Brasil** · **30+ anos de experiência prática** em Eletrônica Embarcada (ECU/EPROM/CAN), Telemetria Satelital e Infraestrutura de Hardware/Redes.
 
-Na **Mecânica Rally**, liderança da transformação digital e implantação da vertical de seguros e rastreamento, com **+60% de crescimento**, e criação do **AutoTech AI OS & Zezé da Regulagem**. Credenciado Ituran desde 2018. Formação: Direito (7º semestre — FACIC, 2023–2028), CST em Segurança da Informação (3º semestre — UCB, 2025–2028) e Técnico em Mecatrônica (UNI VITÓRIA TEC, 2026–2026, concluinte 2026).
+**Em transição estratégica para Segurança da Informação** (AppSec, DevSecOps e Cibersegurança Automotiva/IoT), **Governança de IA e Direito Digital (LGPD)**. A especialização prática está em eletrônica, telemetria e infraestrutura; cibersegurança é a área de transição formal e estudo.
 
-Busco **estágio em Segurança da Informação (AppSec, DevSecOps, Cibersegurança Automotiva, GRC), Direito Digital (LGPD, Governança de IA) ou Engenharia de IA**, além de projetos e consultoria técnica.
+Na Mecânica Rally, liderança da transformação digital e implantação da vertical de seguros e rastreamento, associada a **+60% de crescimento da operação**, conforme relato profissional do titular. Credenciado Ituran desde 2018. Formação: Direito (7º semestre — FACIC), Segurança da Informação (3º semestre — UCB) e Mecatrônica (UNI VITÓRIA TEC).
+
+**Headline oficial PT-BR — 207 caracteres:**
+
+```text
+Segurança da Informação, DevSecOps & Direito Digital | Governança de IA, LGPD & RAG (Python/LangGraph) | 30+ anos em Eletrônica Embarcada (ECU/CAN), Telemetria & Redes | Direito (7º sem.) & SecInfo (3º sem.)
+```
+
+**Headline oficial EN-US — 202 caracteres:**
+
+```text
+Information Security, DevSecOps & Digital Law | AI Governance, Privacy (LGPD) & RAG (Python/LangGraph) | 30+ yrs in Embedded Systems (ECU/CAN), Telemetry & Networks | Law (7th sem.) & InfoSec (3rd sem.)
+```
+
+O [kit de posicionamento](docs/LINKEDIN_KIT.md) contém as headlines oficiais e o Sobre nos dois idiomas, com distinção entre trajetória prática, transição de carreira e escopo técnico demonstrável.
+
+**Escopo comprovável:** este checkout demonstra Python/Pydantic, auditor AST, recuperação lexical em memória, StateGraph próprio e workflow de auditoria. LangGraph, PostgreSQL/pgvector, OAuth2 e Vault integram a arquitetura de referência do produto; sua implementação no produto completo não é comprovada pelo código público. O schema rejeita registros com PII detectada e exige anonimização na origem; não anonimiza automaticamente nem certifica conformidade jurídica integral.
+
+Busco estágio e posições de transição/projetos em AppSec, DevSecOps, GRC, Cibersegurança Automotiva/IoT, Direito Digital, Governança de IA e Engenharia de IA.
 
 ## 🇬🇧 Executive summary
 
-Based in **Lorena, São Paulo, Brazil**, I bring **31 years of hands-on experience since 1995** in hardware, networks, automotive embedded electronics (ECU/EPROM/ADAS) and satellite telemetry. At Mecânica Rally, digital transformation and the launch of insurance/tracking services drove **over 60% growth**. I am an accredited Ituran specialist and am completing a **Technical Diploma in Mechatronics (UNI VITÓRIA TEC, 2026)**.
+Based in **Lorena, São Paulo, Brazil**, I bring **30+ years of hands-on experience in embedded electronics (ECU/EPROM/CAN), satellite telemetry and hardware/network infrastructure**. I am making a strategic transition into **Information Security (AppSec, DevSecOps and Automotive/IoT Cybersecurity), AI Governance and Digital Law (LGPD)**.
 
-I am a dual-degree student (Law, 7th semester; Information Security, 3rd semester) who builds what most teams only
-document: **legal requirements turned into executable security and compliance controls**. My flagship project,
-**AutoTech AI OS & Zezé da Regulagem**, is a monorepo SaaS (B2B/B2C) for the automotive aftermarket. It combines a
-**LangGraph multi-agent system** (mechanical diagnosis, computer vision, commercial quoting), a **semantic RAG on
-PostgreSQL + `pgvector`**, **OAuth2 with Vault-managed secrets**, strict **Pydantic/Mypy** validation and a **SAST
-pipeline** (proprietary AST auditor "Guardião", Bandit, Semgrep).
+I study Law (7th semester, FACIC) and Information Security (3rd semester, UCB), alongside technical training in Mechatronics at UNI VITÓRIA TEC. My practical specialization is in electronics and telemetry; cybersecurity is my formal transition and study area.
 
-What sets it apart is the **IP-compliance-by-design RAG**: the architecture *forbids* scraping closed proprietary
-databases and ingests only public factual technical data (Ohms, Volts, bar, pinouts, SAE/ISO OBD2 codes, torque in Nm),
-open manufacturer catalogs and first-party telemetry — aligned with Brazil's Copyright Law (9.610/98), Software Law
-(9.609/98) and LGPD (data protection). This repository is the **public showcase**: runnable code, a CI pipeline and a
-technical-legal ADR.
+The public showcase demonstrates Python/Pydantic validation, an AST auditor, a custom StateGraph, lexical retrieval in memory and a configured security workflow. LangGraph, PostgreSQL/pgvector, OAuth2 and Vault belong to the product reference architecture; this checkout does not establish their deployment in the complete product. Ingestion rules reject detected personal data and require source anonymization, rather than automatically anonymizing records or certifying legal compliance.
 
-**Looking for:** internships in Application Security, DevSecOps, GRC / Privacy, Digital Law (LGPD, AI governance, IP) or
-AI Engineering (Python / LangGraph / RAG).
+Seeking internships and transition/project opportunities in AppSec, DevSecOps, GRC, Automotive/IoT Cybersecurity, Digital Law, AI Governance and AI Engineering.
 
 ---
 
@@ -70,7 +78,7 @@ Ecossistema **SaaS B2B/B2C** em **monorepo** para oficinas, mecânicos e motoris
 - **SOS Guincho / Emergência** — acionamento de socorro com geolocalização e despacho.
 - **Barganha do Zezé** — *marketplace* P2P de peças e serviços com negociação.
 
-**Agentes (LangGraph)**
+**Arquitetura de referência dos agentes (LangGraph)**
 
 | Agente | Responsabilidade | Fontes de conhecimento |
 |---|---|---|
@@ -272,13 +280,13 @@ Technical leadership and governance; digital transformation and launch of insura
 
 ### 2018 – Presente / Present | Credenciado Ituran Rastreadores
 
-**PT-BR — Especialista Técnico em Telemetria Satelital, Rastreamento & Cibersegurança Automotiva** · Lorena, São Paulo, Brasil
+**PT-BR — Técnico em Telemetria Satelital & Rastreamento Veicular (IoT)** · Lorena, São Paulo, Brasil
 
-Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras, com foco em segurança física/lógica de IoT/M2M e cibersegurança automotiva. Atuação em raio de 300 km de Lorena, SP.
+Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras. Atuação em raio de 300 km de Lorena, SP. Base prática em eletrônica e telemetria aplicada à transição estratégica para estudos de Cibersegurança Automotiva/IoT; não apresentada como especialização profissional já estabelecida nessa área.
 
-**EN-US — Technical Specialist in Satellite Telemetry, Tracking & Automotive Cybersecurity** · Lorena, São Paulo, Brazil
+**EN-US — Satellite Telemetry & Vehicle Tracking Technician (IoT)** · Lorena, São Paulo, Brazil
 
-Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers. Focus on IoT/M2M physical and logical security and automotive cybersecurity, within a 300 km radius of Lorena, SP.
+Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers within a 300 km radius of Lorena, SP. This practical electronics and telemetry background supports a strategic transition into Automotive/IoT Cybersecurity studies; it is not presented as established professional specialization in cybersecurity.
 
 ### 2003 – 2017 | Mecânica Rally 2
 

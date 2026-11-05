@@ -26,7 +26,7 @@ import re
 import sys
 import time
 from collections.abc import Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Final
 
@@ -129,6 +129,7 @@ class Texts:
     headline_en: str
     about_en: str
     project_en: str
+    seo_start_year: str | None = None
 
 
 def _text_blocks(markdown: str, heading_pattern: str) -> list[str]:
@@ -1061,7 +1062,312 @@ def action_publish_card(page: Page, texts: Texts, save: bool) -> bool:
     return _comment_on_post(page, url, save)
 
 
+# SEO depende de dados persistidos no LinkedIn; nunca injeta tags OG no DOM.
+SEO_POSITION: Final[str] = "Arquiteto de IA, DevSecOps & Governança Jurídica (LGPD)"
+SEO_POSITION_EN: Final[str] = "AI, DevSecOps & Legal Governance Architect (LGPD)"
+SEO_COMPANY: Final[str] = "AutoTech AI OS — Cibersegurança, DevSecOps & IA"
+SEO_ITURAN: Final[str] = "Técnico em Telemetria Satelital & Rastreamento Veicular (IoT)"
+SEO_ITURAN_EN: Final[str] = "Satellite Telemetry & Vehicle Tracking Technician (IoT)"
+SEO_RECEIPT: Final[Path] = Path(USER_DATA_DIR) / "seo_result.json"
+
+
+def _seo_record(key: str, value: object) -> None:
+    if SEO_RECEIPT.parent.is_symlink() or SEO_RECEIPT.parent.stat().st_mode & 0o077:
+        raise PlaywrightError("O diretório da sessão deve ser privado para registrar a verificação SEO.")
+    receipt = json.loads(SEO_RECEIPT.read_text()) if SEO_RECEIPT.exists() else {}
+    receipt[key] = value
+    SEO_RECEIPT.write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n")
+
+
+def _seo_entry(page: Page, company: str) -> Locator | None:
+    _section_text(page, "experience")
+    entries = page.locator('a[href*="/details/experience/edit/forms/"]:not([aria-label])')
+    matches = [entry for entry in entries.all()
+               if company in [line.strip() for line in entry.inner_text().splitlines()]]
+    if len(matches) > 1:
+        raise PlaywrightError("Experiência ambígua: " + company)
+    return matches[0] if matches else None
+
+
+def _seo_dates(dialog: Locator, entry_text: str) -> None:
+    # O editor preenche novembro por padrão mesmo quando a data salva contém só ano.
+    if not re.search(r"\b(?:jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)\.", entry_text, re.I):
+        for label in ("Mês de início", "Mês de término"):
+            field = dialog.get_by_label(label, exact=False)
+            if field.count():
+                field.select_option("")
+    for field in dialog.locator('input[type="checkbox"]').all():
+        label = field.get_attribute("aria-label") or ""
+        if field.get_attribute("role") == "switch" or re.search(r"Encerrar cargo|End current", label, re.I):
+            _set_checkbox(field, False)
+
+
+def _seo_translate_position(page: Page, target: str, title: str) -> None:
+    _goto(page, target)
+    dialog = page.locator('dialog[open]').first
+    dialog.wait_for(state="visible", timeout=30000)
+    tab = dialog.get_by_text("English", exact=True).first
+    tab.click(timeout=45000)
+    page.wait_for_timeout(2000)
+    field = dialog.locator('input:not([type]),input[type="text"]').first
+    _plain_field(field, title)
+    _save_and_wait(dialog, page)
+    # Verificar o campo internacional em uma nova navegação, sem presumir sincronismo.
+    _goto(page, target)
+    dialog = page.locator('dialog[open]').first
+    dialog.get_by_text("English", exact=True).first.click(timeout=45000)
+    field = dialog.locator('input:not([type]),input[type="text"]').first
+    field.wait_for(state="visible", timeout=15000)
+    if field.input_value() != title:
+        raise PlaywrightError("Título internacional não persistiu.")
+
+
+def _seo_verify_dates(page: Page, company: str, original: str) -> Locator:
+    entry = _seo_entry(page, company)
+    if entry is None:
+        raise PlaywrightError("Experiência ausente após edição.")
+    pattern = r"\b(?:jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)\."
+    if not re.search(pattern, original, re.I) and re.search(pattern, entry.inner_text(), re.I):
+        target = entry.evaluate("element => element.href")
+        _goto(page, target)
+        dialog = page.locator('dialog[open]').first
+        dialog.wait_for(state="visible", timeout=30000)
+        _seo_dates(dialog, original)
+        _save_and_wait(dialog, page)
+        entry = _seo_entry(page, company)
+        if entry is None or re.search(pattern, entry.inner_text(), re.I):
+            raise PlaywrightError("O editor reintroduziu mês não informado; conferência interrompida.")
+    original_years = re.findall(r"\b(?:19|20)\d{2}\b", original)
+    if any(year not in entry.inner_text() for year in original_years):
+        raise PlaywrightError("Os anos originais não foram preservados.")
+    return entry
+
+
+def action_seo_ituran(page: Page, texts: Texts, save: bool) -> bool:
+    entry = _seo_entry(page, "Credenciado Ituran Rastreadores")
+    if entry is None:
+        raise PlaywrightError("Experiência Ituran não localizada; nenhuma experiência substituta criada.")
+    original = entry.inner_text()
+    target = entry.evaluate("element => element.href")
+    _goto(page, target)
+    dialog = page.locator('dialog[open]').first
+    dialog.wait_for(state="visible", timeout=30000)
+    _plain_field(dialog.locator('input:not([type]),input[type="text"]').first, SEO_ITURAN)
+    _seo_dates(dialog, original)
+    if not save:
+        return True
+    _save_and_wait(dialog, page)
+    _seo_translate_position(page, target, SEO_ITURAN_EN)
+    entry = _seo_verify_dates(page, "Credenciado Ituran Rastreadores", original)
+    if SEO_ITURAN not in entry.inner_text():
+        raise PlaywrightError("Cargo Ituran não confirmado após salvar.")
+    if "2018" not in entry.inner_text() or "o momento" not in entry.inner_text().casefold():
+        raise PlaywrightError("Cronologia Ituran não foi preservada.")
+    _seo_record("ituran", {"title": SEO_ITURAN, "title_en": SEO_ITURAN_EN, "start_year": "2018"})
+    return True
+
+
+def action_seo_position(page: Page, texts: Texts, save: bool) -> bool:
+    entry = _seo_entry(page, SEO_COMPANY)
+    if entry is None:
+        configured = _profile_data().get("seo_primary_position", {})
+        year = texts.seo_start_year or configured.get("start_year")
+        if year is None or re.fullmatch(r"(?:19|20)\d{2}", str(year)) is None:
+            raise PlaywrightError("Falta ano real do AutoTech: informe --seo-start-year ANO; não reutilizar 2018 da Mecânica Rally.")
+        dialog = _open_dialog(page, PROFILE_URL + "edit/forms/position/new/", 'input:not([type]),input[type="text"]')
+        fields = dialog.locator('input:not([type]),input[type="text"]')
+        _plain_field(fields.nth(0), SEO_POSITION)
+        _plain_field(fields.nth(1), SEO_COMPANY)
+        _plain_field(fields.nth(2), "Lorena, São Paulo, Brasil")
+        _set_checkbox(dialog.get_by_label("Trabalho aqui atualmente", exact=True), True)
+        dialog.get_by_label("Ano de início", exact=False).select_option(str(year))
+        dialog.get_by_label("Mês de início", exact=False).select_option("")
+        description = (
+            "Projeto autoral de arquitetura de IA, DevSecOps e governança de dados orientada à LGPD. "
+            "Showcase Python com auditoria AST, validação Pydantic, recuperação de evidências em memória "
+            "e guardrails. Atuação vinculada à transição estratégica para Segurança da Informação e Direito Digital. "
+            "A arquitetura de referência do produto é distinguida dos componentes demonstrativos publicados."
+        )
+        _type_rich(dialog.locator('[role="textbox"],textarea').first, description)
+        _seo_dates(dialog, str(year))
+        if not save:
+            return True
+        _save_and_wait(dialog, page)
+        entry = _seo_entry(page, SEO_COMPANY)
+        if entry is None:
+            raise PlaywrightError("Nova experiência AutoTech não persistiu.")
+    else:
+        original = entry.inner_text()
+        target = entry.evaluate("element => element.href")
+        _goto(page, target)
+        dialog = page.locator('dialog[open]').first
+        dialog.wait_for(state="visible", timeout=30000)
+        _plain_field(dialog.locator('input:not([type]),input[type="text"]').first, SEO_POSITION)
+        _seo_dates(dialog, original)
+        if not save:
+            return True
+        _save_and_wait(dialog, page)
+        entry = _seo_entry(page, SEO_COMPANY)
+    if entry is None:
+        raise PlaywrightError("Experiência AutoTech ausente.")
+    original = entry.inner_text()
+    target = entry.evaluate("element => element.href")
+    _seo_translate_position(page, target, SEO_POSITION_EN)
+    _seo_verify_dates(page, SEO_COMPANY, original)
+    _seo_record("primary_position", {"title": SEO_POSITION, "title_en": SEO_POSITION_EN, "company": SEO_COMPANY})
+    return True
+
+
+def action_seo_order(page: Page, texts: Texts, save: bool) -> bool:
+    _goto(page, PROFILE_URL + "details/experience/reorder/")
+    dialog = page.locator('dialog[open]').first
+    rows = dialog.locator('[data-testid="experiencesCollection"] > li')
+    rows.first.wait_for(state="visible", timeout=30000)
+    target = rows.filter(has_text=SEO_COMPANY)
+    if target.count() != 1:
+        raise PlaywrightError("AutoTech não identificado para reordenação.")
+    if not save:
+        log("Reordenação não executada (--no-save).")
+        return True
+    # O próprio componente documenta Space, ArrowUp e Space para mover com teclado.
+    for _ in range(rows.count()):
+        if SEO_COMPANY in rows.first.inner_text():
+            break
+        handle = target.locator('button[aria-roledescription="sortable"]')
+        handle.focus()
+        handle.press("Space")
+        handle.press("ArrowUp")
+        handle.press("Space")
+        page.wait_for_timeout(1500)
+    _goto(page, PROFILE_URL + "details/experience/reorder/")
+    first = page.locator('[data-testid="experiencesCollection"] > li').first
+    first.wait_for(state="visible", timeout=30000)
+    if SEO_COMPANY not in first.inner_text():
+        raise PlaywrightError("Ordem principal AutoTech não persistiu.")
+    _seo_record("experience_order", "AutoTech em primeiro lugar")
+    return True
+
+
+def _seo_intro(page: Page, texts: Texts, save: bool, hide_company: bool = False) -> bool:
+    _goto(page, PROFILE_URL + "edit/intro/")
+    dialog = page.locator('dialog[open]').first
+    position = dialog.get_by_label("Empresa/organização", exact=True)
+    position.wait_for(state="visible", timeout=30000)
+    if hide_company:
+        position.select_option(value="")
+    else:
+        position.select_option(label=SEO_POSITION)
+    education = dialog.get_by_label("Formação acadêmica", exact=True)
+    schools = education.locator("option").all_text_contents()
+    school = next((x for x in schools if "Universidade Católica de Brasília" in x or "FACIC" in x), None)
+    if school is None:
+        raise PlaywrightError("Nenhuma das instituições acadêmicas autorizadas está disponível.")
+    education.select_option(label=school)
+    field = dialog.locator('[role="textbox"]').first
+    _type_rich(field, texts.headline)
+    if not save:
+        return True
+    dialog.get_by_role("button", name=re.compile(r"^(Salvar|Save)$", re.I)).first.click(timeout=30000)
+    page.wait_for_timeout(2500)
+    _goto(page, PROFILE_URL + "edit/intro/")
+    dialog = page.locator('dialog[open]').first
+    position = dialog.get_by_label("Empresa/organização", exact=True)
+    if hide_company and position.input_value() != "":
+        raise PlaywrightError("A ocultação da empresa não persistiu.")
+    if not hide_company and position.locator("option:checked").inner_text() != SEO_POSITION:
+        raise PlaywrightError("Posição da introdução não persistiu.")
+    if dialog.get_by_label("Formação acadêmica", exact=True).locator("option:checked").inner_text() != school:
+        raise PlaywrightError("Instituição selecionada não persistiu.")
+    # Na UI observada a aba English só permite nome/headline; posição e escola são compartilhadas.
+    dialog.get_by_text("English", exact=True).first.click(timeout=45000)
+    page.wait_for_timeout(2000)
+    if dialog.locator("select").count():
+        position_en = dialog.get_by_label(re.compile(r"Empresa/organização|Current position|Company", re.I))
+        if hide_company:
+            position_en.select_option(value="")
+        else:
+            position_en.select_option(label=SEO_POSITION_EN)
+    elif "perfil principal" not in dialog.inner_text().casefold():
+        raise PlaywrightError("Não foi possível verificar o comportamento da introdução em inglês.")
+    _type_rich(dialog.locator('[role="textbox"]').first, texts.headline_en)
+    dialog.get_by_role("button", name=re.compile(r"^(Salvar|Save)$", re.I)).first.click(timeout=30000)
+    page.wait_for_timeout(2500)
+    _goto(page, PROFILE_URL + "edit/intro/")
+    dialog = page.locator('dialog[open]').first
+    position = dialog.get_by_label("Empresa/organização", exact=True)
+    position.wait_for(state="visible", timeout=30000)
+    if hide_company and position.input_value() != "":
+        raise PlaywrightError("A aba English não preservou a ocultação da empresa.")
+    if not hide_company and position.locator("option:checked").inner_text() != SEO_POSITION:
+        raise PlaywrightError("A aba English não preservou a posição principal.")
+    if dialog.get_by_label("Formação acadêmica", exact=True).locator("option:checked").inner_text() != school:
+        raise PlaywrightError("A aba English não preservou a formação selecionada.")
+    _goto(page, PROFILE_URL)
+    page.wait_for_timeout(2500)
+    _seo_record("intro", {"position": None if hide_company else SEO_POSITION,
+                           "company": None if hide_company else SEO_COMPANY, "company_hidden": hide_company, "school": school,
+                           "english": "headline sincronizada; posição/escola compartilhadas na UI observada"})
+    return True
+
+
+def action_seo_intro(page: Page, texts: Texts, save: bool) -> bool:
+    return _seo_intro(page, texts, save)
+
+
+def action_seo_hide_company(page: Page, texts: Texts, save: bool) -> bool:
+    """Oculta a empresa da introdução, sem encerrar vínculos ou inventar datas."""
+    return _seo_intro(page, texts, save, hide_company=True)
+
+
+def _seo_inspector_title(text: str) -> str | None:
+    """Extrai o valor rotulado como título, sem confundir descrição ou texto auxiliar."""
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    name = FIRST_NAME + " " + LAST_NAME
+    for line in lines:
+        label, separator, value = line.partition("\t")
+        if separator and label.casefold().rstrip(":") in {"title", "título"} and name in value:
+            return value.strip()
+    for index, line in enumerate(lines[:-1]):
+        if line.casefold().rstrip(":") in {"title", "título"}:
+            candidate = lines[index + 1]
+            if name in candidate:
+                return candidate
+    return None
+
+
+def _seo_title_matches(title: str | None) -> bool:
+    return bool(title and not re.search(r"Ituran", title, re.I)
+                and any(word in title for word in ("AutoTech", "Governança", "Governance", "DevSecOps")))
+
+
+def action_seo_inspector(page: Page, texts: Texts, save: bool) -> bool:
+    _goto(page, "https://www.linkedin.com/post-inspector/")
+    field = page.get_by_placeholder("Enter a URL to see how it is shared on LinkedIn")
+    field.wait_for(state="visible", timeout=30000)
+    field.fill(PROFILE_URL)
+    if not save:
+        return True
+    page.get_by_role("button", name=re.compile(r"^(Inspect|Inspecionar)$", re.I)).click(timeout=45000)
+    page.wait_for_timeout(5000)
+    visible = page.locator("body").inner_text()
+    # Coletar somente a resposta visível do Inspector; não confundir title da sessão com OG público.
+    title = _seo_inspector_title(visible)
+    _seo_record("post_inspector", {"url": page.url, "title": title, "visible_result": visible[:18000]})
+    log("Resposta do Post Inspector registrada em " + str(SEO_RECEIPT))
+    if title and re.search(r"Ituran", title, re.I):
+        raise PlaywrightError("Post Inspector ainda contém Ituran; atualização pública não foi confirmada.")
+    if not _seo_title_matches(title):
+        raise PlaywrightError("Post Inspector não confirmou o título desejado; consultar resultado registrado.")
+    return True
+
+
 ACTIONS: Final[dict[str, tuple[str, Callable[[Page, Texts, bool], bool]]]] = {
+    "IT": ("Ituran: título técnico PT/EN, datas preservadas", action_seo_ituran),
+    "PR": ("Experiência própria AutoTech PT/EN", action_seo_position),
+    "OR": ("AutoTech primeiro na hierarquia", action_seo_order),
+    "IN": ("Cargo principal e formação na introdução PT/EN", action_seo_intro),
+    "HI": ("Ocultar empresa na introdução e preservar headlines", action_seo_hide_company),
+    "OG": ("Atualizar e conferir Post Inspector", action_seo_inspector),
     "X": ("Datas de experiências apenas por ano", action_year_only_dates),
     "S": ("Localização Lorena", action_location),
     "T": ("Oito experiências profissionais", action_experiences),
@@ -1114,8 +1420,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default="",
         help="ações a executar, ex.: A,E (A intro, B sobre, C rascunho, D projeto, E editar post, "
         "F comentário, G formação, H competências do projeto, S cidade, T experiências, "
-        "U certificados, V Mecatrônica, W publicar card e comentário, X precisão de anos). Sem valor, só abre o painel.",
+        "U certificados, V Mecatrônica, W publicar card e comentário, X precisão de anos, IT/PR/OR/IN/HI/OG SEO). Sem valor, só abre o painel.",
     )
+    parser.add_argument("--seo-start-year", metavar="ANO", help="ano real de início no AutoTech; obrigatório para criar experiência sem data já cadastrada")
     parser.add_argument("--batch", action="store_true", help="executa e encerra; exige sessão já autenticada")
     parser.add_argument("--headless", action="store_true", help="executa sem janela")
     parser.add_argument("--render-card", action="store_true", help="gera somente o card HTML em 1200x627")
@@ -1128,7 +1435,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     """Ponto de entrada."""
     args = parse_args(argv)
-    texts = load_texts()
+    texts = replace(load_texts(), seo_start_year=args.seo_start_year)
     if args.print_texts:
         sys.stdout.write(
             f"headline={len(texts.headline)} about={len(texts.about)} "

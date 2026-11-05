@@ -2,7 +2,7 @@
 
 **Autor:** Ricardo Luiz G. Flávio · **Perfil:** <https://www.linkedin.com/in/ricardo-flavio/>
 
-> Perfil-alvo: recrutadores de AppSec, DevSecOps, GRC/Privacidade, Direito Digital e Engenharia de IA.
+> Posicionamento: 30+ anos em eletrônica embarcada (ECU/EPROM/CAN), telemetria satelital e infraestrutura de hardware/redes; transição estratégica para Segurança da Informação, Governança de IA e Direito Digital. Cibersegurança Automotiva/IoT é área de transição e estudo, não especialização profissional já estabelecida.
 > Limites do LinkedIn respeitados: headline ≤ 220 caracteres · "Sobre" ≤ 2.600 · descrição de experiência ≤ 2.000 · posts ≤ 3.000.
 > Dados biográficos fornecidos pelo titular. Localização pública: **Lorena, São Paulo, Brasil**. Nunca incluir endereço residencial ou documentos pessoais.
 
@@ -23,22 +23,22 @@
 
 ## 1. Headlines (3 opções)
 
-**Opção A — Híbrida: Direito Digital + AppSec** *(recomendada para vagas que pedem os dois perfis)*
+**Opção A — Headline oficial PT-BR** · 207 caracteres
 
 ```text
-31 anos em Hardware, Redes & ECU/EPROM | DevSecOps, AppSec, IA & LGPD | Direito (7º sem.) + Seg. Informação (3º sem.) + Mecatrônica | Buscando estágio
+Segurança da Informação, DevSecOps & Direito Digital | Governança de IA, LGPD & RAG (Python/LangGraph) | 30+ anos em Eletrônica Embarcada (ECU/CAN), Telemetria & Redes | Direito (7º sem.) & SecInfo (3º sem.)
 ```
 
 **Opção B — Foco técnico: DevSecOps / Engenharia de IA**
 
 ```text
-Segurança da Informação (UCB) | DevSecOps & AI Engineering: Python, LangGraph, RAG com pgvector, SAST (AST, Bandit, Semgrep) e OAuth2 | Buscando estágio
+Transição para DevSecOps & AppSec | Python, Pydantic, SAST (AST/Bandit/Semgrep) e Governança de IA | 30+ anos em Eletrônica Embarcada, Telemetria & Redes | Buscando estágio
 ```
 
 **Opção C — Foco jurídico: GRC / LGPD**
 
 ```text
-Direito (FACIC) + Segurança da Informação (UCB) | GRC, LGPD, Propriedade Intelectual e Governança de IA | Compliance as Code | Buscando estágio
+Direito Digital & Governança de IA | LGPD e Compliance as Code | Direito (FACIC) + Segurança da Informação (UCB) | 30+ anos em Eletrônica, Telemetria & Redes | Transição e estágio
 ```
 
 ---
@@ -46,62 +46,47 @@ Direito (FACIC) + Segurança da Informação (UCB) | GRC, LGPD, Propriedade Inte
 ## 2. Seção "Sobre" (About)
 
 ```text
-Tenho 31 anos de base prática, desde 1995, em Hardware, Redes, Eletrônica Embarcada Automotiva (ECU/EPROM/ADAS) e Telemetria Satelital. Vivo em Lorena, São Paulo, Brasil.
+Profissional com mais de 30 anos de trajetória prática em tecnologia, infraestrutura de hardware/redes, eletrônica embarcada automotiva (ECU/EPROM, CAN/OBD2 e ADAS) e telemetria satelital corporativa, como credenciado Ituran no atendimento a multinacionais e montadoras.
 
-Na Mecânica Rally, lidero a transformação digital e a implantação da vertical de seguros e rastreamento para linha leve, pesada, motos e máquinas, impulsionando a empresa em +60%. Sou credenciado Ituran desde 2018, com atuação técnica em raio de 300 km, diagnóstico de telemetria satelital/RF e segurança de IoT/M2M.
+Realizo uma transição estratégica para Segurança da Informação (AppSec, DevSecOps e Cibersegurança Automotiva/IoT), Governança de IA e Direito Digital (LGPD e Propriedade Intelectual). Curso Direito (7º semestre — FACIC) e Segurança da Informação (3º semestre — UCB), além da formação técnica em Mecatrônica (UNI VITÓRIA TEC).
 
-Minha trajetória inclui reprogramação de ECU diretamente em EPROM, mapas de injeção e avanço, conversão de combustível, GNV, câmbios, Air-Bag, ABS e ADAS; também implantação de laboratórios de hardware, redes, servidores, provimento de internet e docência técnica.
+Na transformação digital da Mecânica Rally, em Lorena-SP, estruturei a vertical de seguros e rastreamento, associada a +60% de crescimento da operação, e arquitetei o AutoTech AI OS & Zezé da Regulagem, projeto de plataforma SaaS multiagente com arquitetura de referência em Python, LangGraph e PostgreSQL/pgvector.
 
-FORMAÇÃO
-• Direito — FACIC, 7º semestre (2023–2028).
-• CST em Segurança da Informação — UCB, 3º semestre (2025–2028).
-• Técnico em Mecatrônica — UNI VITÓRIA TEC, concluinte 2026.
-• 7 certificados oficiais, 294 horas: Hackers do Bem (básico e nivelamento), redes neurais, Direito Autoral e Crimes Cibernéticos, Direito Espacial, Windows Server e Inglês 2.
+COMO CONECTO A BASE PRÁTICA À TRANSIÇÃO
+• Sistemas embarcados, IoT e telemetria: experiência de bancada e campo com ECUs, sensores, atuadores e rastreamento satelital/RF. Aplico essa base aos estudos de proteção de dispositivos conectados, com atenção à segurança operacional, à documentação técnica e aos requisitos regulatórios aplicáveis.
+• DevSecOps e IA segura: o showcase público contém Python 3.12, tipagem estática estrita com Mypy, validação Pydantic v2, auditoria estática via AST (Guardião), Bandit, Semgrep e testes de guardrails para riscos de prompt injection e vazamento de dados. O orquestrador demonstrativo usa StateGraph próprio e recuperação lexical em memória; não executa a biblioteca LangGraph nem um banco pgvector.
+• Direito Digital e governança de dados: controles orientados à LGPD, à Lei de Direitos Autorais (9.610/98) e à Lei do Software (9.609/98), com validação de proveniência e rejeição de registros com dados pessoais detectados. A anonimização na origem é um requisito; o schema não anonimiza automaticamente nem garante conformidade jurídica integral.
 
-Sou autor do AutoTech AI OS & Zezé da Regulagem: ecossistema automotivo com Python, agentes LangGraph, RAG em PostgreSQL/pgvector, OAuth2/Vault e DevSecOps. No showcase público, demonstro o gate jurídico Pydantic, auditor AST, Bandit, Semgrep e validação de saída OWASP LLM05. O produto completo é privado e está em teste em oficina real.
-
-Transformo requisitos de LGPD e propriedade intelectual em controles executáveis: origem auditada, dados factuais, bloqueio de fontes proprietárias fechadas e minimização de dados pessoais.
-
-Busco estágio em Segurança da Informação (AppSec, DevSecOps, Cibersegurança Automotiva, GRC), Direito Digital (LGPD, Governança de IA) ou Engenharia de IA. Também estou disponível para projetos e consultoria técnica.
-
-Portfólio: github.com/ricardolgflavio-pixel/ricardolgflavio-pixel
+Busco estágio e posições de transição/projetos em AppSec, DevSecOps, GRC, Cibersegurança Automotiva/IoT, Direito Digital (LGPD/Governança de IA) e Engenharia de IA.
 ```
 
 ---
 
 ## 3. Experiência / Projetos (Método STAR)
 
-**Título:** Fundador e Engenheiro de Segurança & IA — AutoTech AI OS & Zezé da Regulagem
+**Título:** Autor do projeto AutoTech AI OS & Zezé da Regulagem — transição para Segurança da Informação e IA
 **Tipo:** Projeto autoral · **Competências a vincular:** Python, LangGraph, RAG, pgvector, DevSecOps, SAST, OAuth2, LGPD, Governança de IA
 
 **Descrição (cole no campo de descrição):**
 
 ```text
-SaaS B2B/B2C em monorepo para o mercado automotivo: agentes de IA, planos de manutenção preventiva, SOS Guincho e Barganha do Zezé (marketplace P2P).
+PROBLEMA
+Demonstrar controles de segurança e proveniência em um fluxo de recuperação de evidências para apoio ao diagnóstico automotivo.
 
-SITUAÇÃO
-▪ IA de diagnóstico automotivo exige dados técnicos, e extrair bases proprietárias fechadas (Doutor-IE, Simplo) arrisca violar as Leis 9.610/98 e 9.609/98. A telemetria própria traz dados pessoais sujeitos à LGPD.
+SOLUÇÃO
+Showcase em Python com auditor AST Guardião, gate de ingestão Pydantic e orquestração demonstrativa por StateGraph próprio. Há validação de entrada, filtro lógico por tenant, verificação de citações e recusa de saídas inseguras.
 
-TAREFA
-▪ Projetar um sistema multi-agente com RAG seguro e juridicamente defensável desde a origem, com evidências auditáveis.
+STACK IMPLEMENTADA
+Python 3.12, Pydantic v2, Mypy, biblioteca ast, Bandit, Semgrep, GitHub Actions e pip-audit. Recuperação lexical em memória; conector LLM opcional com fallback offline e testes simulados.
 
-AÇÃO
-▪ Orquestrei 3 agentes em LangGraph: Diagnóstico Mecânico, Visão Computacional e Comercial/Orçamentação.
-▪ Modelei o RAG em PostgreSQL + pgvector com filtro de conformidade de PI: origem lícita, dado factual e nenhum scraping.
-▪ Implementei Compliance as Code com Pydantic v2: validação de origem, licença, copyright e PII (LGPD) antes de gravar no índice.
-▪ Apliquei OAuth2 com escopos mínimos, segredos no Vault, Pydantic e Mypy strict.
-▪ Construí o "Guardião", auditor SAST próprio baseado em AST (eval/exec, segredos hardcoded, SQL concatenado, endpoints sem validação), integrado a Bandit, Semgrep e pip-audit.
-▪ Redigi um ADR com matriz de risco (OWASP Top 10 for LLM, LGPD, Lei 9.610/98).
+RESULTADO DEMONSTRÁVEL
+Autoteste do Guardião com oito regras; gate com três aceites e três rejeições; orquestrador com 52 verificações offline. Esses números descrevem cenários de teste, não clientes ou eficácia universal.
 
-RESULTADO TÉCNICO
-▪ Quality gate de CI que bloqueia merge com falhas de severidade alta (tipagem estrita, SAST em 3 camadas, SCA).
-▪ Achados com CWE e OWASP para injeção, segredos expostos e execução dinâmica.
+ARQUITETURA DE REFERÊNCIA DO PRODUTO
+LangGraph, PostgreSQL/pgvector e integrações de identidade/segredos são elementos da arquitetura do AutoTech AI OS. Sua implementação no produto completo não é demonstrada por este checkout. O agente de visão local não analisa pixels.
 
-RESULTADO JURÍDICO
-▪ Política de PI aplicada por código: fontes proibidas são rejeitadas na ingestão, com trilha de auditoria (audit_id e SHA-256).
-▪ Privacy by Design: telemetria só entra com base legal, anonimização e segregação por tenant.
-
-Stack: Python, LangGraph, FastAPI, PostgreSQL, pgvector, Pydantic, Mypy, Bandit, Semgrep, GitHub Actions, OAuth2, Vault.
+PRIVACIDADE E GOVERNANÇA
+O schema valida proveniência e rejeita registros com PII detectada; a anonimização deve ocorrer na origem. Detectores são heurísticos e não certificam conformidade integral com LGPD ou direitos autorais.
 ```
 
 **Formação (campos de educação):**
@@ -113,7 +98,7 @@ Stack: Python, LangGraph, FastAPI, PostgreSQL, pgvector, Pydantic, Mypy, Bandit,
 
 ## 4. Competências (Skills)
 
-> O LinkedIn aceita até 50. **Fixe as 3 primeiras** (Application Security, DevSecOps, LGPD): são as mais buscadas pelos recrutadores-alvo.
+> Priorize as competências coerentes com as vagas e com evidência de projeto. AppSec, DevSecOps e LGPD são áreas-alvo; a presença de ferramentas no showcase não comprova experiência profissional ou domínio de todas as competências abaixo.
 
 **Segurança e DevSecOps (18)**
 Application Security (AppSec) · DevSecOps · SAST (Static Application Security Testing) · Segurança da Informação · OWASP Top 10 · OWASP Top 10 for LLM Applications · Secure SDLC · Análise Estática de Código · Threat Modeling · OAuth 2.0 · Gestão de Segredos · HashiCorp Vault · Bandit · Semgrep · CI/CD · GitHub Actions · Análise de Vulnerabilidades · ISO/IEC 27001
@@ -246,64 +231,49 @@ O código, o workflow de GitHub Actions e o ADR estão no meu GitHub, link no pr
 
 > Texto para o idioma secundário English do perfil; a aplicação deve ser verificada na sessão autenticada.
 
-**Headline (EN)**
+**Headline oficial (EN)** · 202 caracteres
 
 ```text
-31 Years in Hardware, Networks & ECU/EPROM | DevSecOps, AppSec, AI & LGPD | Law (7th sem.), Information Security (3rd sem.) & Mechatronics | Seeking Internship
+Information Security, DevSecOps & Digital Law | AI Governance, Privacy (LGPD) & RAG (Python/LangGraph) | 30+ yrs in Embedded Systems (ECU/CAN), Telemetry & Networks | Law (7th sem.) & InfoSec (3rd sem.)
 ```
 
 **About (EN)**
 
 ```text
-I bring 31 years of practical experience since 1995 in hardware, networks, automotive embedded electronics (ECU/EPROM/ADAS) and satellite telemetry. Based in Lorena, São Paulo, Brazil.
+I bring 30+ years of hands-on experience in hardware/network infrastructure, automotive embedded electronics (ECU/EPROM, CAN/OBD2 and ADAS) and corporate satellite telemetry, as an accredited Ituran technical professional serving multinational companies and automakers.
 
-At Mecânica Rally, I lead digital transformation and the launch of insurance and vehicle-tracking services for cars, heavy vehicles, motorcycles and machinery, driving growth of over 60%. An accredited Ituran technical specialist since 2018, I work within a 300 km radius on satellite/RF telemetry, diagnostics and IoT/M2M security.
+I am making a strategic career transition into Information Security (AppSec, DevSecOps and Automotive/IoT Cybersecurity), AI Governance and Digital Law (LGPD and intellectual property). I study Law (7th semester, FACIC) and Information Security (3rd semester, UCB), alongside technical training in Mechatronics at UNI VITÓRIA TEC.
 
-My background includes ECU reprogramming directly in EPROM memory, injection and ignition maps, fuel conversion, CNG systems, transmissions, Air-Bag, ABS and ADAS; hardware laboratory deployment, networks, internet servers and technical teaching.
+At Mecânica Rally in Lorena, São Paulo, I structured insurance and tracking services during digital transformation, associated with over 60% operational growth. I designed AutoTech AI OS & Zezé da Regulagem, a multi-agent SaaS platform project with a reference architecture using Python, LangGraph and PostgreSQL/pgvector.
 
-EDUCATION
-• Law, LL.B. — FACIC, 7th semester (2023–2028).
-• Information Security, Technologist degree — UCB, 3rd semester (2025–2028).
-• Technical Diploma in Mechatronics — UNI VITÓRIA TEC, completing in 2026.
-• 7 official certificates totaling 294 hours: Hackers do Bem (basic and foundation), neural networks, copyright and cybercrime, space law, Windows Server and English 2.
+HOW MY PRACTICAL BACKGROUND SUPPORTS THIS TRANSITION
+• Embedded systems, IoT and telemetry: bench and field experience with ECUs, sensors, actuators and satellite/RF tracking, now applied to studies of connected-device security, with attention to operational safety, technical documentation and applicable regulatory requirements.
+• DevSecOps and secure AI: the public showcase contains Python 3.12, strict static typing with Mypy, Pydantic v2 validation, the Guardião AST auditor, Bandit, Semgrep and guardrail tests for prompt injection and data leakage. Its demonstration orchestrator uses a custom StateGraph and lexical retrieval in memory; it does not execute the LangGraph library or a pgvector database.
+• Digital Law and data governance: controls informed by LGPD, Brazilian Copyright Law (9.610/98) and Software Law (9.609/98), with provenance validation and rejection of records containing detected personal data. Source anonymization is a requirement; the schema does not automatically anonymize records or guarantee full legal compliance.
 
-I created AutoTech AI OS & Zezé da Regulagem: an automotive ecosystem using Python, LangGraph agents, PostgreSQL/pgvector RAG, OAuth2/Vault and DevSecOps. The public showcase demonstrates a Pydantic legal ingestion gate, an AST auditor, Bandit, Semgrep and OWASP LLM05 output validation. The full product is private and under testing in a real repair shop.
-
-I translate LGPD and intellectual-property requirements into executable controls: audited provenance, factual data, blocked closed proprietary sources and personal-data minimization.
-
-Seeking internships in Information Security (AppSec, DevSecOps, Automotive Cybersecurity, GRC), Digital Law (LGPD, AI Governance) or AI Engineering. Also available for technical projects and consulting.
-
-Portfolio: github.com/ricardolgflavio-pixel/ricardolgflavio-pixel
+Seeking internships and transition/project opportunities in AppSec, DevSecOps, GRC, Automotive/IoT Cybersecurity, Digital Law, AI Governance and AI Engineering.
 ```
 
 **Project (EN)**
 
 ```text
-B2B/B2C SaaS monorepo for the automotive aftermarket: AI agents, preventive-maintenance plans, SOS tow/emergency and a P2P marketplace.
+PROBLEM
+Demonstrate security and provenance controls in an evidence-retrieval workflow supporting automotive diagnostics.
 
-SITUATION
-▪ AI diagnosis for cars needs technical data, and scraping closed proprietary databases risks violating Brazilian copyright and software laws (9.610/98, 9.609/98). First-party telemetry also contains personal data under LGPD.
+SOLUTION
+Python showcase with the Guardião AST auditor, a Pydantic ingestion gate and a custom StateGraph demonstration orchestrator. Includes input checks, logical tenant filtering, citation validation and unsafe-output refusal.
 
-TASK
-▪ Design a multi-agent RAG system that is secure and legally defensible by design, with auditable evidence.
+IMPLEMENTED STACK
+Python 3.12, Pydantic v2, Mypy, ast, Bandit, Semgrep, GitHub Actions and pip-audit. Lexical retrieval in memory; optional LLM connector with offline fallback and mocked adapter tests.
 
-ACTION
-▪ Orchestrated 3 LangGraph agents: Mechanical Diagnosis, Computer Vision and Commercial Quoting.
-▪ Modeled the RAG on PostgreSQL + pgvector with an IP-compliance filter: lawful source, factual data only, no scraping.
-▪ Implemented Compliance as Code with Pydantic v2: validation of source, license, copyright markers and PII before anything is written to the index.
-▪ Applied OAuth2 with least-privilege scopes, Vault-managed secrets, Pydantic and strict Mypy.
-▪ Built "Guardião", an in-house AST-based SAST auditor (eval/exec, hardcoded secrets, string-built SQL, unvalidated endpoints), integrated with Bandit, Semgrep and pip-audit.
-▪ Wrote an ADR with a risk matrix (OWASP Top 10 for LLM, LGPD, Copyright Law).
+DEMONSTRABLE RESULT
+Eight auditor rules exercised, three accepted and three rejected ingestion fixtures, and 52 offline orchestrator checks. These are test scenarios, not customer outcomes or universal effectiveness metrics.
 
-TECHNICAL RESULT
-▪ CI quality gate that blocks merges on high-severity findings (strict typing, three SAST layers, SCA).
-▪ Findings mapped to CWE and OWASP for injection, exposed secrets and dynamic execution.
+PRODUCT REFERENCE ARCHITECTURE
+LangGraph, PostgreSQL/pgvector and identity/secrets integrations belong to the product reference architecture. This checkout does not demonstrate their implementation in the complete product. The local vision node does not analyze pixels.
 
-LEGAL RESULT
-▪ IP policy enforced as code: prohibited sources are rejected at ingestion, with an audit trail (audit_id and SHA-256).
-▪ Privacy by Design: telemetry is admitted only with a lawful basis, anonymization and tenant segregation.
-
-Stack: Python, LangGraph, FastAPI, PostgreSQL, pgvector, Pydantic, Mypy, Bandit, Semgrep, GitHub Actions, OAuth2, Vault.
+PRIVACY AND GOVERNANCE
+The schema validates provenance and rejects records with detected personal data. Anonymization must happen at the source. Heuristic checks do not certify full legal compliance.
 ```
 
 ## 8. Trajetória profissional — 31 anos desde 1995 / Career history
@@ -320,13 +290,13 @@ Technical leadership and governance; digital transformation and launch of insura
 
 ### 2018 – Presente / Present | Credenciado Ituran Rastreadores
 
-**PT-BR — Especialista Técnico em Telemetria Satelital, Rastreamento & Cibersegurança Automotiva** · Lorena, São Paulo, Brasil
+**PT-BR — Técnico em Telemetria Satelital & Rastreamento Veicular (IoT)** · Lorena, São Paulo, Brasil
 
-Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras, com foco em segurança física/lógica de IoT/M2M e cibersegurança automotiva. Atuação em raio de 300 km de Lorena, SP.
+Instalação, manutenção e diagnóstico de telemetria satelital/RF em frotas pesadas, máquinas, veículos leves e motos, atendendo multinacionais, montadoras e seguradoras. Atuação em raio de 300 km de Lorena, SP. Base prática em eletrônica e telemetria aplicada à transição estratégica para estudos de Cibersegurança Automotiva/IoT; não apresentada como especialização profissional já estabelecida nessa área.
 
-**EN-US — Technical Specialist in Satellite Telemetry, Tracking & Automotive Cybersecurity** · Lorena, São Paulo, Brazil
+**EN-US — Satellite Telemetry & Vehicle Tracking Technician (IoT)** · Lorena, São Paulo, Brazil
 
-Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers. Focus on IoT/M2M physical and logical security and automotive cybersecurity, within a 300 km radius of Lorena, SP.
+Installation, maintenance and diagnostics of satellite/RF telemetry for heavy fleets, machinery, cars and motorcycles, serving multinationals, automakers and insurers within a 300 km radius of Lorena, SP. This practical electronics and telemetry background supports a strategic transition into Automotive/IoT Cybersecurity studies; it is not presented as established professional specialization in cybersecurity.
 
 ### 2003 – 2017 | Mecânica Rally 2
 
@@ -473,3 +443,53 @@ O script lê os textos deste kit e os registros estruturados em `scripts/linkedi
 A ação **W publica** o Post 1 com o card de `assets/linkedin_post_card.html`, aguarda o preview e comenta o link do GitHub na URL da nova publicação. O recibo em `/tmp/linkedin_post_receipt.json` permite retomar o comentário sem republicar. A ação C mantém o comportamento de rascunho. `--no-save` preenche os formulários sem enviar.
 
 [Publicação com card e vitrine técnica](https://www.linkedin.com/feed/update/urn:li:activity:7523601679770869761/).
+
+## 12. Introdução, cargo principal e metadados Open Graph
+
+**Posição principal desejada:** Arquiteto de IA, DevSecOps & Governança Jurídica (LGPD).
+**Empresa/projeto:** AutoTech AI OS — Cibersegurança, DevSecOps & IA.
+**Título internacional:** AI, DevSecOps & Legal Governance Architect (LGPD).
+
+A experiência AutoTech deve ser própria e ficar no topo das experiências atuais. O vínculo da Mecânica Rally permanece separado; sua data de início não deve ser atribuída ao projeto AutoTech. A criação de uma nova experiência exige o ano real informado pelo titular, via `--seo-start-year ANO` ou `seo_primary_position.start_year` no cadastro local. Sem esse dado, a ação falha e não inventa uma data. Meses não informados são removidos, inclusive quando o editor os preenche automaticamente.
+
+A experiência Ituran é mantida como **Técnico em Telemetria Satelital & Rastreamento Veicular (IoT)**, com o título internacional **Satellite Telemetry & Vehicle Tracking Technician (IoT)** e a cronologia original. Não encerrar o vínculo para retirá-lo da introdução.
+
+### Controles observados na sessão
+
+- A introdução PT-BR contém um seletor **Empresa/organização** com as posições atuais. Selecionar a posição AutoTech; não confundir esse seletor com o campo livre **Título** (headline).
+- Em **Formação acadêmica**, selecionar UCB ou FACIC entre as formações já cadastradas, sem criar uma nova matrícula.
+- Na interface observada, a aba **English** permite nome e headline e informa que a introdução completa é editada no perfil principal. A posição e a instituição são compartilhadas nessa interface; não fingir que existem seletores independentes em inglês. O script confirma essa condição e sincroniza a headline internacional.
+- A hierarquia usa um componente de reordenação por teclado: espaço para selecionar, seta para cima para mover e espaço para soltar. Confirmar a ordem depois de reabrir a tela; uma alteração visual temporária no DOM não é evidência de persistência.
+
+### Execução explícita
+
+```bash
+/tmp/li_venv/bin/python -B scripts/linkedin_auto_config.py --batch --headless --only IT
+/tmp/li_venv/bin/python -B scripts/linkedin_auto_config.py --batch --headless --only PR --seo-start-year ANO
+/tmp/li_venv/bin/python -B scripts/linkedin_auto_config.py --batch --headless --only OR,IN
+/tmp/li_venv/bin/python -B scripts/linkedin_auto_config.py --batch --headless --only OG
+```
+
+Substituir `ANO` pelo dado real do titular. Executar a etapa seguinte somente se a anterior passar. `IT`: título técnico Ituran PT/EN; `PR`: experiência AutoTech PT/EN, sem duplicação; `OR`: hierarquia persistida; `IN`: posição e escola na introdução, com headlines preservadas; `HI`: ocultar a empresa operacional enquanto o início real do projeto não estiver informado, sem encerrar os vínculos; `OG`: envio ao Post Inspector e conferência do resultado. `--no-save` permite preencher sem enviar; na reordenação ele não move os cargos.
+
+### O que o Post Inspector pode comprovar
+
+O script abre `https://www.linkedin.com/post-inspector/`, envia somente a URL pública do próprio perfil e registra a resposta visível em `/tmp/linkedin_profile_session/seo_result.json`. Não altera `document.title` ou tags `meta` via JavaScript para simular sucesso. O título da página autenticada pode não conter `og:title` e não comprova o cartão público.
+
+A seleção de posição e a hierarquia são controles do perfil, não controle direto sobre o algoritmo de metadados do LinkedIn. O envio ao Inspector solicita nova coleta; sucesso deve ser confirmado no resultado efetivamente exibido. Se a página estiver indisponível ao coletor ou continuar mostrando Ituran, relatar a limitação sem afirmar que o cache foi limpo. O cache do WhatsApp é independente; o Inspector não oferece garantia de invalidação imediata em aplicativos de terceiros.
+
+### Verificação registrada em 05/11/2026
+
+- Cargo Ituran atualizado em português e inglês; mantido **2018–presente**, sem mês presumido.
+- Empresa operacional ocultada no seletor da introdução com a ação `HI`; UCB mantida como formação em destaque e headlines PT/EN preservadas.
+- A aba English usa a configuração compartilhada de empresa/formação do perfil principal na interface observada.
+- A coleta do Post Inspector informou **“a few seconds ago”**, mas o campo Title ainda retornou **“Ricardo Luiz G. Flávio - Credenciado Ituran Rastreadores | LinkedIn”**. Isso registra uma tentativa de atualização, não comprova invalidação do cache público nem do WhatsApp.
+- A nova experiência AutoTech e sua promoção ao topo aguardam o **ano real de início do projeto**, solicitado ao titular. `seo_primary_position.start_year` permanece `null`; nenhum emprego ou início foi fabricado. O histórico da Mecânica Rally foi preservado.
+
+Os testes de decisões SEO podem ser executados localmente, sem navegador ou rede:
+
+```bash
+/tmp/li_venv/bin/python -B -m unittest discover -s tests -v
+```
+
+Validação local desta alteração: dez testes de decisões SEO e Mypy estrito em `showcase`. A inspeção adicional de Bandit no script de automação identifica quatro referências temporárias preexistentes (sessão, banner, card e recibo de publicação); esses caminhos não foram alterados nesta correção. O novo recibo SEO fica dentro do diretório privado da sessão, cuja permissão é verificada antes da gravação. O workflow principal continua limitado ao escopo `showcase`.
